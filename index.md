@@ -4,7 +4,7 @@ hello!
 
 this is the first site of Onion
 
-welcome!！
+welcome!
 
-Share some vedeos I'm watching:
+Share some videos I'm watching:
 <iframe src="https://jx.parwix.com:4433/player/?url=https://www.iqiyi.com/v_sscxkwa0vc.html?vfrm=pcw_playpage" controls="controls" width="80%" height =auto/>
