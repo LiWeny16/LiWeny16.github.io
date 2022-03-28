@@ -2,6 +2,6 @@
 
 hello!
 
-this is the first sites of Onion
+this is the first site of Onion
 
 welcome!！
