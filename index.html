@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+   <title>Onion的主页</title>
+   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+<style>
+    body{
+        background-image: linear-gradient(225deg, #FFDDEE, rgb(255, 255, 255));
+    }
+    .card img {
+        width: 100%;
+        border-radius: 8px;
+    }
+    .image{
+        width: 100%;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        filter: blur(4px);
+       
+    }
+    .card{
+        height: 400px;
+        width: 380px;
+        background-color:white;
+        box-shadow: 5px 5px 10px 2px rgba(102, 98, 98, 0.2);
+        border-radius: 8px;
+        display: inline-block;
+        margin-left: 100px;
+        vertical-align: top;
+        /* position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%) */
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        caret-color: transparent;
+        /* -webkit-animation-name: fadeIn; /*动画名称*/
+-webkit-animation-duration: 3s; /*动画持续时间*/
+-webkit-animation-iteration-count: 3; /*动画次数*/
+-webkit-animation-delay: 0s; /*延迟时间
+-webkit-animation:mymove 5s infinite; */
+animation: dong 2s infinite;
+    
+    }
+    .card span {
+        font-size: 32px;
+        color: #BFBFBF;
+        display: block;
+        letter-spacing: 2px;
+        padding: 30px 20px;
+    }
+@keyframes mymove{
+    form{left:0px}
+    to{left: 200px;}
+}
+    @keyframes fadeIn {
+0% {
+opacity: 0; /*初始状态 透明度为0*/
+}
+50% {
+opacity: 0; /*中间状态 透明度为0*/
+}
+100% {
+opacity: 1; /*结尾状态 透明度为1*/
+}
+}
+@keyframes dong { 
+       0% {             
+           transform: translate(0px, 0px);            
+        }            
+        50% {                
+           transform: translate(0px, -10px);            
+        }            
+        100% {                
+           transform: translate(0px, 0px);
+        }
+}
+    </style>
+    <body>
+        
+    <div class="bg">
+    
+    <!-- <img class = image src="back2.jpg" alt=""> -->
+    <div class="card">
+        <img  src="back.jpg" alt="">
+        <div>
+            <span>欢迎来到，Onion的主页</span>
+        </div>
+    </div>
+    </div>
+      </body>
+
+</html>
