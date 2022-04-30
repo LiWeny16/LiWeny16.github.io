@@ -1,30 +1,37 @@
 <!DOCTYPE html>
 <html lang="zh">
+
 <head>
     <meta charset="UTF-8">
-   <title>Onion的主页</title>
-   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <title>Onion的主页</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
 <style>
-    body{
-        background-image: linear-gradient(225deg, #FFDDEE, rgb(255, 255, 255));
+    body {
+        /* background-image: linear-gradient(225deg, #FFDDEE, rgb(255, 255, 255)); */
+        background-image: url(background/back3.jpg);
+        background-size: 1300px, 1920px;
+        background-repeat: no-repeat;
+
     }
+
     .card img {
         width: 100%;
         border-radius: 8px;
     }
-    .image{
+
+    .image {
         width: 100%;
         background-size: 100%;
         background-repeat: no-repeat;
-        filter: blur(4px);
-       
+
     }
-    .card{
-        height: 450px;
+
+    .card {
+        height: 150px;
         width: 380px;
-        background-color:white;
-        box-shadow: 5px 5px 10px 2px rgba(102, 98, 98, 0.2);
+        background-color: transparent;
+        box-shadow: 5px 5px 10px 2px rgba(4, 0, 0, 0.818);
         border-radius: 8px;
         display: inline-block;
         margin-left: 100px;
@@ -36,18 +43,38 @@
         position: absolute;
         top: 0;
         bottom: 0;
-        left: 0;
-        right: 0;
+        left: 0px;
+        right: 500px;
         margin: auto;
         caret-color: transparent;
-        /* -webkit-animation-name: fadeIn; /*动画名称*/
--webkit-animation-duration: 3s; /*动画持续时间*/
--webkit-animation-iteration-count: 3; /*动画次数*/
--webkit-animation-delay: 0s; /*延迟时间
--webkit-animation:mymove 5s infinite; */
-animation: dong 2s infinite;
-    
+        animation: dong 2s infinite, fadeIn 2s 1;
+
     }
+
+    .card2 {
+        height: 400px;
+        width: 380px;
+        background-color: transparent;
+        box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.832);
+        border-radius: 8px;
+        display: inline-block;
+        margin-left: 100px;
+        vertical-align: top;
+        /* position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%) */
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 500px;
+        right: 0px;
+        margin: auto;
+        caret-color: transparent;
+        /*光标隐藏*/
+        animation: dong 1.5s infinite, fadeIn 2s 1;
+    }
+
     .card span {
         font-size: 32px;
         color: #BFBFBF;
@@ -55,50 +82,105 @@ animation: dong 2s infinite;
         letter-spacing: 2px;
         padding: 30px 20px;
     }
-@keyframes mymove{
-    form{left:0px}
-    to{left: 200px;}
-}
-    @keyframes fadeIn {
-0% {
-opacity: 0; /*初始状态 透明度为0*/
-}
-50% {
-opacity: 0; /*中间状态 透明度为0*/
-}
-100% {
-opacity: 1; /*结尾状态 透明度为1*/
-}
-}
-@keyframes dong { 
-       0% {             
-           transform: translate(0px, 0px);            
-        }            
-        50% {                
-           transform: translate(0px, -10px);            
-        }            
-        100% {                
-           transform: translate(0px, 0px);
+
+    .card2 span {
+        color: #a1a1a1;
+        display: block;
+        letter-spacing: 2px;
+        text-align: center;
+        padding: 30px 0px;
+    }
+
+    @keyframes mymove {
+        form {
+            left: 0px
         }
-}
-    </style>
-    <body>
-        
+
+        to {
+            left: 200px;
+        }
+    }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+            /*初始状态 透明度为0*/
+        }
+
+        50% {
+            opacity: 0;
+            /*中间状态 透明度为0*/
+        }
+
+        100% {
+            opacity: 1;
+            /*结尾状态 透明度为1*/
+        }
+    }
+
+    @keyframes dong {
+        0% {
+            transform: translate(0px, 0px);
+        }
+
+        50% {
+            transform: translate(0px, -10px);
+        }
+
+        100% {
+            transform: translate(0px, 0px);
+        }
+    }
+
+    audio {
+        height: 50px;
+        padding: 3%;
+    }
+
+    .card2 span::before {
+        content: "♥";
+
+    }
+</style>
+
+<body>
+
     <div class="bg">
-    
-    <!-- <img class = image src="back2.jpg" alt=""> -->
-    <div class="card">
-        <img  src="back.jpg" alt="">
-        <div>
-            <span>欢迎来到，Onion的主页</span>
-            <audio controls="controls">
-                      <source src="璃月港.mp3" type="audio/mpeg">
+
+
+        <div class="card">
+            <!-- <img src="background/back.jpg" alt=""> -->
+            <div>
+                <span>欢迎来到，Onion的主页</span>
+                <!-- <audio controls="controls">
+                      <source src="music/璃月港.mp3" type="audio/mpeg">
               Your browser does not support the audio element.
-              </audio>
+              </audio> -->
+            </div>
+
         </div>
-    
+        <div class="card2">
+            <span>最喜欢的乐队RADWIMPS的专辑</span>
+            <audio controls="control">
+                <source src="music/RADWIMPS - 夢灯籠.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls="controls">
+                <source src="music/RADWIMPS - デート.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls="controls">
+                <source src="music/RADWIMPS - 前前前世.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls="controls">
+                <source src="music/RADWIMPS - 夢灯籠.mp3" type="audio/mpeg">
+            </audio>
+        </div>
     </div>
-    </div>
-      </body>
+</body>
 
 </html>
+<!-- /* -webkit-animation-name: fadeIn; /*动画名称*/
+-webkit-animation-duration: 3s; /*动画持续时间*/
+-webkit-animation-iteration-count: 3; /*动画次数*/
+-webkit-animation-delay: 0s; /*延迟时间
+-webkit-animation:mymove 5s infinite; */
+学习代码 -->
