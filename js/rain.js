@@ -1,4 +1,4 @@
-
+function rian_now(){
     const box=document.getElementById('rainBox');
     let boxHeight=box.clientHeight;
     let boxWidth=box.clientWidth;
@@ -7,6 +7,16 @@
         boxHeight=box.clientHeight;
         boxWidth=box.clientWidth;
     }
+    // window.onload=function(){
+    //     setTimeout(function(){
+    //     if(document.getElementById("bgmusic").pause())
+    //     {
+    //         document.getElementById("bgmusic").play()
+    //     }}
+    //     ,"1000")
+       
+    // }
+  
     // 每隔一段时间,添加雨滴
    setInterval(function(){
     const rain=document.createElement('div');
@@ -28,3 +38,6 @@
         rain.style.top=parseInt(rain.style.top)+race+'px'
     },20)
    },50)
+  
+}
+
