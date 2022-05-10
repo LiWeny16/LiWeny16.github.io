@@ -6,6 +6,7 @@ $(".card_outside").click(
 		document.getElementById("bgmusic").play();
 		document.getElementById("stmusic").play();
 		rian_now();
+	   	alert("祝不倒翁生日快乐！QAQ");
     }
 );
 function rian_now(){
