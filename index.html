@@ -3,17 +3,19 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes">
     <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
     </script>
     <title>Onion的主页</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
 <style>
-    *{
+    * {
         margin: 0;
         padding: 0;
     }
+
     body {
         /* background-image: linear-gradient(225deg, #FFDDEE, rgb(255, 255, 255)); */
         /* background-size: 100%, 100%;
@@ -24,14 +26,16 @@
         -webkit-background-attachment: fixed;
         -webkit-background-size: 100%,100%; */
     }
-    .bg{
+
+    .bg {
         width: 100vw;
         height: 100vh;
-         background: url(background/back3.jpg) center center no-repeat;
-        background-size: cover; 
+        background: url(background/back3.jpg) center center no-repeat;
+        background-size: cover;
         /* background-color: rgb(52, 147, 198); */
     }
-    #rainBox{
+
+    #rainBox {
         position: fixed;
         top: 0;
         left: 0;
@@ -40,15 +44,16 @@
         /* 不阻挡其他元素事件触发 */
         pointer-events: none;
     }
-    .rain{
+
+    .rain {
         position: absolute;
         width: 2px;
         height: 50px;
-        background: linear-gradient(rgba(255,255,255,.3),rgba(255,255,255,.6));
- 
+        background: linear-gradient(rgba(255, 255, 255, .3), rgba(255, 255, 255, .6));
+
     }
 
-    .card img {
+    .card_inside img {
         width: 100%;
         border-radius: 8px;
     }
@@ -59,20 +64,15 @@
         background-repeat: no-repeat;
 
     }
-
-    .card {
+    .card_outside{
         height: 150px;
         width: 380px;
         background-color: transparent;
-        box-shadow: 5px 5px 10px 2px rgba(4, 0, 0, 0.818);
+        
         border-radius: 8px;
         display: inline-block;
         margin-left: 100px;
         vertical-align: top;
-        /* position: absolute;
-        top: 50%;
-        left: 50%;
-         */
         position: absolute;
         top: 0;
         bottom: 0;
@@ -81,13 +81,38 @@
         margin: auto;
         caret-color: transparent;
         animation: dong 2s infinite, fadeIn 2s 1;
+    }
+
+    .card_inside {
+        height: 150px;
+        width: 380px;
+        background-color: transparent;
+        box-shadow: 5px 5px 10px 2px rgba(4, 0, 0, 0.818);
+        border-radius: 8px;
+        display: inline-block;
+        margin-left: 100px;
+        vertical-align: top;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0px;
+        right: 500px;
+        margin: auto;
+        caret-color: transparent;
+        /* animation: dong 2s infinite, fadeIn 2s 1; */
+        -webkit-transition: width 2s, height 2s, -webkit-transform 2s;
+        /* For Safari 3.1 to 6.0 */
+        transition: width 2s, height 2s, transform 2s;
 
     }
 
-    /* .card:hover {
-        transform: rotateY(180deg);
-        transition: 10s;
-    } */
+    .card_inside:hover {
+        height: 160px;
+        width: 417px;
+        -webkit-transform: rotate(360deg);
+        /* Chrome, Safari, Opera */
+        transform: rotate(360deg);
+    }
 
     #card2 {
         height: 400px;
@@ -114,12 +139,14 @@
     }
 
 
-    .card span {
+    .card_inside span {
         font-size: 32px;
         color: #BFBFBF;
         display: block;
-        letter-spacing: 2px;
-        padding: 30px 20px;
+        letter-spacing: 3px;
+        padding: 45px 20px;
+        text-align: center;
+        
 
     }
 
@@ -205,24 +232,25 @@
     <div id="rainBox"></div>
     <div class="bg">
 
-
-        <div class="card">
-            <!-- <img src="background/back.jpg" alt=""> -->
-            <div>
-                <span>欢迎来到，Onion的主页</span>
-                <!-- <audio controls="controls">
+<div class="card_outside">
+    <div class="card_inside">
+        <!-- <img src="background/back.jpg" alt=""> -->
+        <div>
+            <span>欢迎来到Onion主页</span>
+            <!-- <audio controls="controls">
                       <source src="music/璃月港.mp3" type="audio/mpeg">
               Your browser does not support the audio element.
               </audio> -->
-            </div>
+        </div>
+    </div>
 
         </div>
         <div id="card2">
             <span>最喜欢的乐队RADWIMPS的专辑</span>
-            <audio controls="control">
+            <audio controls="controls">
                 <source src="music/RADWIMPS - 夢灯籠.mp3" type="audio/mpeg">
             </audio>
-            <audio controls="controls">
+            <audio id="stmusic" controls="controls">
                 <source src="music/RADWIMPS - デート.mp3" type="audio/mpeg">
             </audio>
             <audio controls="controls">
@@ -231,15 +259,17 @@
             <audio controls="controls">
                 <source src="music/RADWIMPS - はじめての、東京.mp3" type="audio/mpeg">
             </audio>
-            
+
+            <audio id="bgmusic" src="music/小雨.mp3" loop="true"></audio>
+
         </div>
         <div id="eggs">
             <span>更新了浮动<span><br>
-            <span>透明效果<span><br>
-            <span>点一下欢迎语会消失哦！<span><br>
-            <span>不刷新回不来的那种-0-0</span>
+                    <span>透明效果<span><br>
+                            <span>点一下欢迎语会消失哦！<span><br>
+                                    <span>不刷新回不来的那种-0-0</span>
         </div>
-      
+
     </div>
 </body>
 <script src="js/fadeIn.js"></script>
