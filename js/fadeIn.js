@@ -2,7 +2,7 @@
 $(".card_outside").click(
     function fadein() {
 //         $(".card_outside").fadeOut(1600);
-		alert("祝不倒翁生日快乐！QAQ");
+		
 		rian_now();
       		document.getElementById("bgmusic").volume=0.3;
 		document.getElementById("bgmusic").play();
