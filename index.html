@@ -19,7 +19,7 @@
     body {
         /* background-image: linear-gradient(225deg, #FFDDEE, rgb(255, 255, 255)); */
         /* background-size: 100%, 100%;
-        background-image: url(background/back3.jpg);
+        background-image: url(https://bing.biturl.top/?resolution=1920&format=image&index=0&mkt=zh-CN);
         background-repeat: repeat;
         align-items: center;
         background-attachment: fixed;
@@ -30,7 +30,7 @@
     .bg {
         width: 100vw;
         height: 100vh;
-        background: url(background/back3.jpg) center center no-repeat;
+        background: url(background/bingdaily.jpg) center center no-repeat;
         background-size: cover;
         /* background-color: rgb(52, 147, 198); */
     }
@@ -228,7 +228,7 @@
 
     }
     #footBox{
-        position: fixed;
+        position:absolute;
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
@@ -243,6 +243,24 @@
         color: rgba(255,255,255,.6);
         text-decoration:none;
     }
+    #hotnews{
+        background-image: linear-gradient(225deg, #FFDDEE, rgb(255, 255, 255));
+    /* padding-bottom:1000px; */
+    width: fit-content;
+    font-size: 50px;
+    color: rgba(255,255,255,.6);
+    text-align: center;
+    text-shadow: 0 0 20px rgb(0 0 0 / 80%);
+    animation: fadeIn 2s 1;  
+    }
+    /* 贪吃蛇 */
+    *{margin:0;padding: 0;font-family: "Microsoft YaHei";}
+#page{margin-right: auto;margin-left: auto; margin-top: 20px;height: 600px; width: 980px; }
+#yard{ width: 1000px;border: 1px solid gray;box-shadow: 0 0 10px black; float: right;}
+#mark{font-weight: 800;}
+#mark_con{ color: red; }
+button{width: 50px; }
+a{text-decoration:none;}
 </style>
 
 
@@ -293,13 +311,44 @@
             <a href="https://space.bilibili.com/394914809" title="Onion的bilibili主页" class="links">Onion</a>
                 
         </div>
-
+       
+    </div>
+    <div id="hotnews" >
+        <span>贪吃蛇</span>
+        <div id="page">
+            <div id="yard"><canvas id="canvas" height="600px" width="800px"></canvas></div>
+    
+            <div id="help">
+                <div id="mark">得分：<span id="mark_con"></span></div>
+                
+                <div id="helper">
+                    <table>
+                        <tr>
+                            <td></td>
+                            <td><button οnclick="keydown(38);">上</button></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><button οnclick="keydown(37);">左</button></td>
+                            <td><button οnclick="keydown(80);" id="pause">暂停</button></td>
+                            <td><button οnclick="keydown(39);">右</button></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><button οnclick="keydown(40);">下</button></td>
+                            <td></td>
+                        </tr>
+                    </table><a href="index.html">再玩一次</a>
+                </div>
+            </div>
+        </div>
+        <div style="text-align:center;">
     </div>
 </body>
 <script src="js/fadeIn.js"></script>
 <script src="js/rain.js"></script>
 <script src="js/API.js"></script>
-
+<script src="js/snake.js"></script>
 
 </html>
 <!-- /* -webkit-animation-name: fadeIn; 动画名称

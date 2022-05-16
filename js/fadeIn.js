@@ -1,11 +1,21 @@
 'use strict';
+// var audioStatus = "paused";
+// var audio = document.getElemnentById("myAudio");
+// audio.addEventListener("playing", function(){
+//     audioStatus = "playing";
+// });
+// audio.addEventListener("pause", function(){
+//     audioStatus = "paused";
+// });
+
 $(".card_outside").click(
     function fadein() {
-//         $(".card_outside").fadeOut(1600);
-		
+        // $(".card_outside").fadeOut(1600);
+      
 		rian_now();
-      		document.getElementById("bgmusic").volume=0.3;
+        document.getElementById("bgmusic").volume=0.3;
 		document.getElementById("bgmusic").play();
+      
 		document.getElementById("stmusic").play();
     }
 );
