@@ -133,13 +133,13 @@
        function isDie(){
                if(snakes[snakecount - 1].x == -20 || snakes[snakecount - 1].x == BLOCK_SIZE * COLS
                        || snakes[snakecount - 1].y == -20 || snakes[snakecount - 1].y == BLOCK_SIZE * ROWS){
-                       alert("Game Over!");
+                    //    alert("Game Over!");
                        clearInterval(interval);
                }
                for(var i = 0; i < snakecount - 1; i++){
                        if(snakes[snakecount - 1].x == snakes[i].x && snakes[snakecount - 1].y == snakes[i].y){
                                clearInterval(interval);
-                               alert("Game Over!");
+                            //    alert("Game Over!");
                        }
                }
        }

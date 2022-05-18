@@ -83,7 +83,7 @@ function checkCookie(){
 		alert("欢迎 " + user + " 再次访问");
 	}
 	else {
-		user = prompt("请输入你的名字:","好巧啊彦祖");
+	//	user = prompt("请输入你的名字:","好巧啊彦祖");
   		if (user!="" && user!=null){
     		setCookie("username",user,365);
     	}

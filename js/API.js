@@ -18,24 +18,24 @@ function ajax1() {
             }
         });
 }
-var json1;
-function ajax2() {
-    //jquery方式  get请求
-        $.ajax({
-            type:"POST",
-            url:"https://tenapi.cn/resou/",
-            async:false, 
-            success:function (res,stat,temp) {
-               // console.log(res);
-                json1=res;
-               //  console.log(json1.data);
-              },
-            error:function(){
-                console.log("调用错误");
-            }
-        });
-}
-console.log(json1);
+// var json1;
+// function ajax2() {
+//     //jquery方式  get请求
+//         $.ajax({
+//             type:"POST",
+//             url:"https://tenapi.cn/resou/",
+//             async:false, 
+//             success:function (res,stat,temp) {
+//                // console.log(res);
+//                 json1=res;
+//                //  console.log(json1.data);
+//               },
+//             error:function(){
+//                 console.log("调用错误");
+//             }
+//         });
+// }
+// console.log(json1);
 // function ajax3() {
 //     //jquery方式  get请求
 //         $.ajax({
@@ -54,5 +54,5 @@ console.log(json1);
 //         });
 // }
 ajax1();
-ajax2();
+// ajax2();
 // ajax3();
