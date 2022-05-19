@@ -25,7 +25,7 @@ $(".button").click(function () {
     $.ajax({
         type: "POST",
         url: "https://tenapi.cn/resou/",
-        async:false,
+        async:true,
 
         dataType: 'JSON',
         success: function (result) {
