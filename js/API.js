@@ -18,41 +18,36 @@ function ajax1() {
             }
         });
 }
-// var json1;
-// function ajax2() {
-//     //jquery方式  get请求
-//         $.ajax({
-//             type:"POST",
-//             url:"https://tenapi.cn/resou/",
-//             async:false, 
-//             success:function (res,stat,temp) {
-//                // console.log(res);
-//                 json1=res;
-//                //  console.log(json1.data);
-//               },
-//             error:function(){
-//                 console.log("调用错误");
-//             }
-//         });
-// }
-// console.log(json1);
-// function ajax3() {
-//     //jquery方式  get请求
-//         $.ajax({
-//             type:"GET",
-//             url:"https://cn.bing.com/HPImageArchive.aspx?n=1&format=js&idx=0",
-          
-//             async:true,
-//             cache:true,
-//             success:function (data) {
-              
-//                 document.getElementsByClassName("bg")[0].style.background="url(data)";
-//               },
-//             error:function(){
-//                 console.log("调用错误");
-//             }
-//         });
-// }
+var ul = document.querySelector("ul");
+
+$(".button").click(function () {
+
+    $.ajax({
+        type: "POST",
+        url: "https://tenapi.cn/resou/",
+        async:false,
+
+        dataType: 'JSON',
+        success: function (result) {
+            var json1 = result;
+            console.log(json1.list.length);
+            var str = "";
+            for (var i = 0; i < json1.list.length; i++) {
+                str += `
+                <li id="list">
+                <p>top${i+1}:${json1.list[i].name}</p>
+                <p id='hot'>热度:${json1.list[i].hot}</p>
+                </li>
+                `;
+
+            }
+            ul.innerHTML = str; 
+
+        },
+
+    });
+
+
+});
+//调用
 ajax1();
-// ajax2();
-// ajax3();
