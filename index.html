@@ -237,11 +237,17 @@
        color: red;
    }
    #hotnews{
-       text-align: center;
-       
+       text-align: left;
+       float: auto;
    }
+
    #list{
     margin: 30px;
+   }
+   #navigationBar{
+       width: 300px;
+       height: 680px;
+       float: left;
    }
   #timeBox{
    
@@ -357,12 +363,17 @@
         <button type="button" class="butn">ajax提交</button><br>
         <span class="con"></span>
     </div> -->
-
-    <div id="hotnews">
-        <input type="button" class="button" value="今日微博热搜" />
-        <ul id="ul">
-            <!--  -->
-        </ul>        
+    <div>
+        <div id="navigationBar">
+            <input type="button" class="button" value="今日微博热搜" />
+        </div>
+        <div id="hotnews">
+           
+            <ul id="ul">
+                <!--  -->
+            </ul>
+        </div>
+       
     </div>
 </body>
 <script>
