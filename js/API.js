@@ -1,3 +1,5 @@
+var json1
+var ul = document.querySelector("ul");
 function ajax1() {
     //jquery方式  get请求
         $.ajax({
@@ -18,34 +20,34 @@ function ajax1() {
             }
         });
 }
-var ul = document.querySelector("ul");
+// 立即请求
+$.ajax({
+    type: "POST",
+    url: "https://tenapi.cn/resou/",
+    async:true,
 
+    dataType: 'JSON',
+    success: function (result) {
+        json1 = result;
+        console.log(json1.list.length);
+       
+
+    },
+
+});
 $("#button1").click(function () {
 
-    $.ajax({
-        type: "POST",
-        url: "https://tenapi.cn/resou/",
-        async:true,
+    var str = "";
+    for (var i = 0; i < json1.list.length; i++) {
+        str += `
+        <li id="list">
+        <p>top${i+1}:${json1.list[i].name}</p>
+        <p id='hot'>热度:${json1.list[i].hot}</p>
+        </li>
+        `;
 
-        dataType: 'JSON',
-        success: function (result) {
-            var json1 = result;
-            console.log(json1.list.length);
-            var str = "";
-            for (var i = 0; i < json1.list.length; i++) {
-                str += `
-                <li id="list">
-                <p>top${i+1}:${json1.list[i].name}</p>
-                <p id='hot'>热度:${json1.list[i].hot}</p>
-                </li>
-                `;
-
-            }
-            ul.innerHTML = str; 
-
-        },
-
-    });
+    }
+    ul.innerHTML = str; 
 
 
 });
