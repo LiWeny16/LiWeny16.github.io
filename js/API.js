@@ -20,7 +20,7 @@ function ajax1() {
 }
 var ul = document.querySelector("ul");
 
-$(".button").click(function () {
+$("#button1").click(function () {
 
     $.ajax({
         type: "POST",
@@ -51,3 +51,25 @@ $(".button").click(function () {
 });
 //调用
 ajax1();
+
+$("#button2").click(function () {
+
+    ul.innerHTML = `
+
+                   <li id="list">
+                    <p id='song'>青春 林婉琬</p>
+                    </li>
+                    <li id="list">
+                    <p id='song'>不见不散 五月天</p>
+                    </li>
+                    <li id="list">
+                    <p id='song'>他夏了夏天 苏打绿</p>
+                    </li>
+                    <li id="list">
+                    <p id='song'>蜂鸟 吴青峰</p>
+                    </li>
+                    <li id="list">
+                    <p id='song'>数字人生 林子祥</p>
+                    </li>
+                    `
+});

@@ -149,7 +149,10 @@
         text-align: center;
         padding: 30px 0px;
     }
-
+    #secondPage{
+        float:none;
+        /* background: linear-gradient(to right top, #65dfc9, #6cdbeb); 渐变色*/ 
+    }
     @keyframes mymove {
         form {
             left: 0px
@@ -231,16 +234,35 @@
     }
     .links{
         color: rgba(255,255,255,.6);
-        text-decoration:none;
+        /* text-decoration:none; */
     }
    #hot{
        color: red;
+       font-size: 20px;
+   } 
+    #hot::before{
+    content: "🔥";
    }
-   #hotnews{
+   #song{
+       color: #bb9495;
+       font-size: 20px;
+   }
+   #song::before{
+    content: ' ♥';
+   }
+ 
+   #content{
        text-align: left;
-       float: auto;
+       float: left;
    }
 
+   .divider{
+    background-color: #FFDD;
+    width: 5px;
+    height: 800px;
+    float: left;
+    caret-color: transparent;
+   }
    #list{
     margin: 30px;
    }
@@ -248,6 +270,7 @@
        width: 300px;
        height: 680px;
        float: left;
+       caret-color: transparent;
    }
   #timeBox{
    
@@ -263,6 +286,21 @@
         color: #BFBFBF;
         animation: fadeIn 2s 1; 
 
+  }
+  .button{
+    display: inline-block;
+    width: 300px;
+    height: 200px;
+  padding: 15px 25px;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;   
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  border: none;
+  background-color: pink;
+  box-shadow: 0 9px #999;
   }
 </style>
 
@@ -319,55 +357,17 @@
         </div>
 
     </div>
-    <!-- <div id="game">
-        <span>贪吃蛇</span>
-        <div id="page">
-            <div id="yard"><canvas id="canvas" height="600px" width="800px"></canvas></div>
-
-            <div id="help">
-                <div id="mark">得分：<span id="mark_con"></span></div>
-
-                <div id="helper">
-                    <table>
-                        <tr>
-                            <td></td>
-                            <td><button οnclick="keydown(38);">上</button></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td><button οnclick="keydown(37);">左</button></td>
-                            <td><button οnclick="keydown(80);" id="pause">暂停</button></td>
-                            <td><button οnclick="keydown(39);">右</button></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td><button οnclick="keydown(40);">下</button></td>
-                            <td></td>
-                        </tr>
-                    </table><a href="index.html">再玩一次</a>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- <div id="extra"></div>
-    
-    <canvas id="view" width="640" height="480"></canvas>
-    <div id="desc">
-        <div>用鼠标滑动水果开始游戏</div>
-    	<div>HTML5游戏《水果忍者》网页版<a href="http://www.html5star.com" target="_blank">HTML5星空</a></div>
-    	<div id="browser"></div>
-    </div> -->
-    <!-- <div>
-        用户名:<input type="text" id="username" name="username" /><br>
-        密码:<input type="password" id="password" name="password" /><br>
-        <button type="button" class="butn">ajax提交</button><br>
-        <span class="con"></span>
-    </div> -->
-    <div>
+    <!-- <HR style="FILTER: alpha(opacity=100,finishopacity=0,style=1)" width="100%" color=#FFDDEE SIZE=3> -->
+    </div> 
+    <div id="secondPage">
         <div id="navigationBar">
-            <input type="button" class="button" value="今日微博热搜" />
+            <input type="button" id="button1" class="button" value="今日微博热搜" /><br>
+            <input type="button" id="button2" class="button" value="Onion音乐排行榜" />
         </div>
-        <div id="hotnews">
+        <div class="divider">
+            <!--  -->
+        </div>
+        <div id="content">
            
             <ul id="ul">
                 <!--  -->
