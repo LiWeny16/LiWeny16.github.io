@@ -13,7 +13,7 @@ $(".card_outside").click(
         // $(".card_outside").fadeOut(1600);
       
 		rian_now();
-        document.getElementById("bgmusic").volume=0.3;
+        document.getElementById("bgmusic").volume=0.5;
 		document.getElementById("bgmusic").play();
       
 		document.getElementById("stmusic").play();
