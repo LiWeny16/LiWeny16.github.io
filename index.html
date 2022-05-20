@@ -60,10 +60,10 @@
         height: 150px;
         width: 380px;
         background-color: transparent;
-        
         border-radius: 8px;
         display: inline-block;
         margin-left: 100px;
+
         vertical-align: top;
         position: absolute;
         top: 0;
@@ -116,7 +116,7 @@
         border-radius: 8px;
         display: inline-block;
 
-        -webkit-transform: rotate(30deg);
+        /* -webkit-transform: rotate(30deg); */
         /* position: absolute;
         top: 50%;
         left: 50%;
@@ -245,13 +245,30 @@
    #list{
     margin: 30px;
    }
-  
+  #timeBox{
+   
+    display: inline-block;
+    font-size: 30px;
+        position: absolute;
+        top: 100px;
+        bottom: 200px;
+        left: 200px;
+        right: 500px;
+     
+        caret-color: transparent;
+        color: #BFBFBF;
+        animation: fadeIn 2s 1; 
+
+  }
 </style>
 
 
 <body>
     <div id="rainBox"></div>
     <div class="bg">
+        <div id="timeBox">
+          <!-- time here -->
+        </div>
 
         <div class="card_outside">
             <div class="card_inside">
@@ -285,8 +302,8 @@
 
         </div>
         <div id="eggs">
-            <span>更新了浮动<span><br>
-                    <span>透明效果<span><br>
+            <span>更新了时间<span><br>
+                    <span>微博API<span><br>
                             <span>点一下欢迎语会消失哦！<span><br>
                                     <span>不刷新回不来的那种-0-0</span>
         </div>
@@ -351,15 +368,14 @@
     </div>
 </body>
 <script>
-
-
+var time=new Date();
+console.log(time);
 </script>
 <script src="js/fadeIn.js"></script>
 <script src="js/rain.js"></script>
 <script src="js/API.js"></script>
 <script src="js/snake.js"></script>
-<script src="scripts/all.js"></script>
-
+<script src="js/time.js"></script>
 </html>
 <!-- /* -webkit-animation-name: fadeIn; 动画名称
 -webkit-animation-duration: 3s; 动画持续时间
