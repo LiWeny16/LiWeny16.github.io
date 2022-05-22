@@ -77,8 +77,10 @@
     }
 
     .card_inside {
-        height: 150px;
-        width: 380px;
+        /* height: 150px;
+        width: 380px; */
+        width: 30vw;
+        height: 19vh;
         background-color: transparent;
         box-shadow: 5px 5px 10px 2px rgba(4, 0, 0, 0.818);
         border-radius: 8px;
@@ -108,8 +110,10 @@
     }
 
     #card2 {
-        height: 400px;
-        width: 380px;
+        /* height: 400px;
+        width: 380px; */
+        width: 30vw;
+        height: 60vh;
         background-color: transparent;
         box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.832);
         border-radius: 8px;
@@ -129,11 +133,16 @@
         caret-color: transparent;
         /*光标隐藏*/
         animation: float 1.5s infinite, fadeIn 2s 1;
+         /* animation: float 2s infinite, fadeIn 2s 1; */
+         /*过渡动画*/
+         -webkit-transition: width 2s, height 2s, -webkit-transform 2s; 
+        /* For Safari 3.1 to 6.0 */
+        transition: width 2s, height 2s, transform 2s;
     }
 
 
     .card_inside span {
-        font-size: 32px;
+        font-size: 2.3vw;
         color: #BFBFBF;
         display: block;
         letter-spacing: 3px;
@@ -153,7 +162,9 @@
 
     #secondPage {
         background: linear-gradient(to right top, #ffffff, #FFDDEE);
-        height: 800px;
+        /* height: 800px; */
+        width: 100vw;
+        height: 100vh;
     }
 
     @keyframes movetoRight {
@@ -215,7 +226,8 @@
     }
 
     audio {
-        height: 50px;
+        height: 6.8vh;
+        width: 26vw ;
         padding: 3%;
     }
 
@@ -309,13 +321,14 @@
     #timeBox {
 
         display: inline-block;
-        font-size: 30px;
-        position: absolute;
+        font-size: 2vw;
+        width: 20vw;
+        height: 20vh;
+        position: relative;
         top: 100px;
         bottom: 200px;
         left: 200px;
         right: 500px;
-
         caret-color: transparent;
         color: #BFBFBF;
         animation: fadeIn 2s 1;
@@ -325,8 +338,8 @@
     .button {
 
         display: inline-block;
-        width: 300px;
-        height: 150px;
+        width: 30vw;
+        height: 23vh;
         /* padding: 15px 0px; */
         font-size: 20px;
         cursor: pointer;

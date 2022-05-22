@@ -3,6 +3,7 @@ var ul = document.querySelector("ul");
 var hotsnum = new Array;
 var fontsizeTemp = new Array;
 var content = document.getElementById("content");
+var timeBox =document.getElementById("timeBox");
 function ajax1() {
     //jquery方式  get请求
     $.ajax({
@@ -63,8 +64,8 @@ $("#button1").click(function () {
     // 
     // hotsnum[i]/129380.731
     for (var i = 0; i <= 9; i++) {
-        console.log("??")
-        if(fontsizeTemp[i]>15){
+        console.log("??跪求大佬给热度和字体大小的算法！！！！")
+        if(fontsizeTemp[i]>0){
     document.getElementsByClassName("hot")[i].style.fontSize = fontsizeTemp[i]+"px";
    // document.getElementsByClassName("content_Inside")[i].style.fontSize = fontsizeTemp[i]+"px"
     }
@@ -113,3 +114,9 @@ $("#button3").click(function () {
   
 });
 
+$("#timeBox").click(function () {
+   alert("Magic,time travel！");
+});
+$("#card2").click(function () {
+    alert("I haven't made any eggs for this box,what a shame!\n(so is this an egg?I'm not sure about this...)");
+ });
