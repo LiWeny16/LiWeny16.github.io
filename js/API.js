@@ -77,7 +77,9 @@ $("#button1").click(function () {
 ajax1();
 
 $("#button2").click(function () {
-
+    setTimeout(() => {
+        
+    
     content.innerHTML = `
                         <a href="https://y.qq.com/n/ryqq/songDetail/000owYG21ojI0v" class='content_Inside'>青春 冷碗碗</a><br>
                         <a href="https://y.qq.com/n/ryqq/songDetail/002vzxVq1HyK8r" class='content_Inside'>不见不散 五月天</a><br>
@@ -90,6 +92,7 @@ $("#button2").click(function () {
                         <a href="https://y.qq.com/n/ryqq/songDetail/003W0rCa3fqguj" class='content_Inside'>心要野 后海大鲨鱼</a><br>
 
                         `
+                    }, 100);
 });
 $("#button3").click(function () {
 
@@ -108,3 +111,4 @@ $("#button3").click(function () {
     console.log("本视频仅仅为学习使用");
     console.log("时间成本问题，没把所有音乐都下载下来，十分抱歉");
 });
+
