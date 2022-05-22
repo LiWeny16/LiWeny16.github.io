@@ -4,7 +4,7 @@ var hotsnum = new Array;
 var fontsizeTemp = new Array;
 var content = document.getElementById("content");
 var timeBox =document.getElementById("timeBox");
-console.log("原来你会打开控制台！");
+
 function ajax1() {
     //jquery方式  get请求
     $.ajax({
@@ -82,16 +82,16 @@ $("#button2").click(function () {
     console.log("时间成本问题，没把所有音乐都下载下来，十分抱歉");
     setTimeout(() => {
     content.innerHTML = `
-                        <a href="https://y.qq.com/n/ryqq/songDetail/000owYG21ojI0v" title="最喜欢的青春在这里" class='content_Inside'>青春 冷碗碗</a><br>
-                        <a href="https://y.qq.com/n/ryqq/songDetail/002vzxVq1HyK8r" title="最喜欢的青春在这里" class='content_Inside'>不见不散 五月天</a><br>
-                        <a href="https://y.qq.com/n/ryqq/mv/q0012myn3cb" title="最喜欢的青春在这里" class='content_Inside'>他夏了夏天 苏打绿</a><br>
-                        <a href="https://y.qq.com/n/ryqq/songDetail/004fFbXN0bc2cP" title="最喜欢的青春在这里" class='content_Inside'>蜂鸟 吴青峰</a><br>
-                        <a href="https://y.qq.com/n/ryqq/songDetail/000sgWr04aAWtS" title="最喜欢的青春在这里" class='content_Inside'>数字人生 林子祥</a><br>
-                        <a href="https://y.qq.com/n/ryqq/mv/T0010Rcobut" title="最喜欢的青春在这里" class='content_Inside'>夜曲 周杰伦</a><br>
-                        <a href="https://y.qq.com/n/ryqq/songDetail/002mx8Iw1iy6zA" title="最喜欢的青春在这里" class='content_Inside'>老妈最常说的十句话 八三夭乐团</a><br>
-                        <a href="https://y.qq.com/n/ryqq/songDetail/002Op5LD0J8W93" title="最喜欢的青春在这里" class='content_Inside'>疯狂世界 五月天</a><br>
-                        <a href="https://y.qq.com/n/ryqq/songDetail/003W0rCa3fqguj" title="最喜欢的青春在这里" class='content_Inside'>心要野 后海大鲨鱼</a><br>
-                        <a href="https://y.qq.com/n/ryqq/songDetail/000MW82Z2j20g2" title="最喜欢的青春在这里" class='content_Inside'>LOSER よねづ けんし</a><br>
+                        <a href="https://y.qq.com/n/ryqq/songDetail/000owYG21ojI0v" title="最喜欢的青春，在这里；—— 一个被世俗绊倒的女孩唱出来的歌曲" class='content_Inside'>青春 冷碗碗</a><br>
+                        <a href="https://y.qq.com/n/ryqq/songDetail/002vzxVq1HyK8r" title="阿信16岁写的曲子，天才是对他最保守的评价" class='content_Inside'>不见不散 五月天</a><br>
+                        <a href="https://y.qq.com/n/ryqq/mv/q0012myn3cb" title="苏打绿，是你唱出的一整个夏天" class='content_Inside'>他夏了夏天 苏打绿</a><br>
+                        <a href="https://y.qq.com/n/ryqq/songDetail/004fFbXN0bc2cP" title="青峰？清风！" class='content_Inside'>蜂鸟 吴青峰</a><br>
+                        <a href="https://y.qq.com/n/ryqq/songDetail/000sgWr04aAWtS" title="地表最强粤语歌曲" class='content_Inside'>数字人生 林子祥</a><br>
+                        <a href="https://y.qq.com/n/ryqq/mv/T0010Rcobut" title="最近听这个上头了，华语果然是坠吊的（乐" class='content_Inside'>夜曲 周杰伦</a><br>
+                        <a href="https://y.qq.com/n/ryqq/songDetail/002mx8Iw1iy6zA" title="呜呜，听哭了" class='content_Inside'>老妈最常说的十句话 八三夭乐团</a><br>
+                        <a href="https://y.qq.com/n/ryqq/songDetail/002Op5LD0J8W93" title="好想好想离开这个世界啊！" class='content_Inside'>疯狂世界 五月天</a><br>
+                        <a href="https://y.qq.com/n/ryqq/songDetail/003W0rCa3fqguj" title="录影棚歌手（嘻嘻）" class='content_Inside'>心要野 后海大鲨鱼</a><br>
+                        <a href="https://y.qq.com/n/ryqq/songDetail/000MW82Z2j20g2" title="你唱的是winner，我是听的是loser" class='content_Inside'>LOSER よねづ けんし</a><br>
 
                         `
                     }, 100);
@@ -127,4 +127,13 @@ $("#card2").click(function () {
 document.getElementById("footBox").children[0].addEventListener("click", function(){
     alert("难道还能使2202不成（乐");
 });
+$("#eggs").click(function () {
+    alert("藏这么深都被你发现了！！")
+});
+document.getElementById("card2").children[1].addEventListener("click", function(){
+    alert("不是吧播放器都要点一下，不会是用控制台点的吧！");
+});
 
+document.getElementById("footBox").children[2].addEventListener("click", function(){
+    alert("Welcome！！");
+});
