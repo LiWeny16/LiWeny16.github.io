@@ -156,7 +156,7 @@
         height: 800px;
     }
 
-    @keyframes mymove {
+    @keyframes movetoRight {
         form {
             left: 0px
         }
@@ -339,9 +339,14 @@
         /* box-shadow: 0 9px #999; */
         border-radius: 10px;
         box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.832);
-        animation:fadeIn 2s 1;
+        -webkit-transition: width 2s, height 2s, -webkit-transform 2s;
+        /* For Safari 3.1 to 6.0 */
+        transition: width 2s, height 2s, transform 2s;
     }
-
+    .button:hover{
+       
+        transform: rotate(-360deg);
+    }
     #button1 {
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
