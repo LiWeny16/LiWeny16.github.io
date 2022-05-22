@@ -71,7 +71,7 @@
         right: 500px;
         margin: auto;
         caret-color: transparent;
-        animation: dong 2s infinite, fadeIn 2s 1;
+        animation: float 2s infinite, fadeIn 2s 1;
 
         user-select: none;
     }
@@ -92,7 +92,7 @@
         right: 500px;
         margin: auto;
         caret-color: transparent;
-        /* animation: dong 2s infinite, fadeIn 2s 1; */
+        /* animation: float 2s infinite, fadeIn 2s 1; */
         -webkit-transition: width 2s, height 2s, -webkit-transform 2s;
         /* For Safari 3.1 to 6.0 */
         transition: width 2s, height 2s, transform 2s;
@@ -128,7 +128,7 @@
         margin: auto;
         caret-color: transparent;
         /*光标隐藏*/
-        animation: dong 1.5s infinite, fadeIn 2s 1;
+        animation: float 1.5s infinite, fadeIn 2s 1;
     }
 
 
@@ -200,7 +200,7 @@
         }
     }
 
-    @keyframes dong {
+    @keyframes float {
         0% {
             transform: translate(0px, 0px);
         }
@@ -342,6 +342,7 @@
         -webkit-transition: width 2s, height 2s, -webkit-transform 2s;
         /* For Safari 3.1 to 6.0 */
         transition: width 2s, height 2s, transform 2s;
+        animation: fadeIn 2s 1;
     }
     .button:hover{
        

@@ -79,7 +79,7 @@ ajax1();
 $("#button2").click(function () {
     setTimeout(() => {
         
-    
+    console.log("时间成本问题，没把所有音乐都下载下来，十分抱歉");
     content.innerHTML = `
                         <a href="https://y.qq.com/n/ryqq/songDetail/000owYG21ojI0v" title="最喜欢的青春在这里" class='content_Inside'>青春 冷碗碗</a><br>
                         <a href="https://y.qq.com/n/ryqq/songDetail/002vzxVq1HyK8r" title="最喜欢的青春在这里" class='content_Inside'>不见不散 五月天</a><br>
@@ -110,6 +110,6 @@ $("#button3").click(function () {
                         `
     console.log("视频用了parwix解析，接口地址：https://vip.parwix.com:4433/player/?url=");
     console.log("本视频仅仅为学习使用");
-    console.log("时间成本问题，没把所有音乐都下载下来，十分抱歉");
+  
 });
 
