@@ -259,6 +259,7 @@
         margin: 4px;
         /* font-size: 15px; */
         display:inline-block ;
+        animation: fadeIn 1s 1;
     }
 
     .hot::before {
@@ -273,7 +274,8 @@
         caret-color: transparent;
         margin: 7px;
         padding: 10px 20px;
-        display:inline-block 
+        display:inline-block ;
+        animation: fadeIn 1s 1;
     }
  
 
@@ -297,8 +299,8 @@
         column-width: 310px;
         column-gap: 35px;
         column-rule: 1px double #666;
-        
         column-fill: auto;
+        animation: fadeIn 1.3s 1;
     }
 
     .divider {
@@ -338,7 +340,7 @@
     .button {
 
         display: inline-block;
-        width: 30vw;
+        width: 25vw;
         height: 23vh;
         /* padding: 15px 0px; */
         font-size: 20px;
@@ -418,7 +420,7 @@
                                     <span>不刷新回不来的那种-0-0</span>
         </div>
         <div id="footBox">
-            "2022"
+            <span>"2022"</span>
             <span id="dayWord"></span>
             <a href="https://space.bilibili.com/394914809" title="Onion的bilibili主页" class="links">Onion</a>
 
@@ -443,7 +445,8 @@
 </body>
 <script>
     var time = new Date();
-    console.log(time);
+    console.log("w");
+    // console.log(time);
 </script>
 <script src="js/fadeIn.js"></script>
 <script src="js/rain.js"></script>
