@@ -81,15 +81,16 @@ $("#button2").click(function () {
         
     
     content.innerHTML = `
-                        <a href="https://y.qq.com/n/ryqq/songDetail/000owYG21ojI0v" class='content_Inside'>青春 冷碗碗</a><br>
-                        <a href="https://y.qq.com/n/ryqq/songDetail/002vzxVq1HyK8r" class='content_Inside'>不见不散 五月天</a><br>
-                        <a href="https://y.qq.com/n/ryqq/mv/q0012myn3cb" class='content_Inside'>他夏了夏天 苏打绿</a><br>
-                        <a href="https://y.qq.com/n/ryqq/songDetail/004fFbXN0bc2cP" class='content_Inside'>蜂鸟 吴青峰</a><br>
-                        <a href="https://y.qq.com/n/ryqq/songDetail/000sgWr04aAWtS" class='content_Inside'>数字人生 林子祥</a><br>
-                        <a href="https://y.qq.com/n/ryqq/mv/T0010Rcobut" class='content_Inside'>夜曲 周杰伦</a><br>
-                        <a href="https://y.qq.com/n/ryqq/songDetail/002mx8Iw1iy6zA" class='content_Inside'>老妈最常说的十句话 八三夭乐团</a><br>
-                        <a href="https://y.qq.com/n/ryqq/songDetail/002Op5LD0J8W93" class='content_Inside'>疯狂世界 五月天</a><br>
-                        <a href="https://y.qq.com/n/ryqq/songDetail/003W0rCa3fqguj" class='content_Inside'>心要野 后海大鲨鱼</a><br>
+                        <a href="https://y.qq.com/n/ryqq/songDetail/000owYG21ojI0v" title="最喜欢的青春在这里" class='content_Inside'>青春 冷碗碗</a><br>
+                        <a href="https://y.qq.com/n/ryqq/songDetail/002vzxVq1HyK8r" title="最喜欢的青春在这里" class='content_Inside'>不见不散 五月天</a><br>
+                        <a href="https://y.qq.com/n/ryqq/mv/q0012myn3cb" title="最喜欢的青春在这里" class='content_Inside'>他夏了夏天 苏打绿</a><br>
+                        <a href="https://y.qq.com/n/ryqq/songDetail/004fFbXN0bc2cP" title="最喜欢的青春在这里" class='content_Inside'>蜂鸟 吴青峰</a><br>
+                        <a href="https://y.qq.com/n/ryqq/songDetail/000sgWr04aAWtS" title="最喜欢的青春在这里" class='content_Inside'>数字人生 林子祥</a><br>
+                        <a href="https://y.qq.com/n/ryqq/mv/T0010Rcobut" title="最喜欢的青春在这里" class='content_Inside'>夜曲 周杰伦</a><br>
+                        <a href="https://y.qq.com/n/ryqq/songDetail/002mx8Iw1iy6zA" title="最喜欢的青春在这里" class='content_Inside'>老妈最常说的十句话 八三夭乐团</a><br>
+                        <a href="https://y.qq.com/n/ryqq/songDetail/002Op5LD0J8W93" title="最喜欢的青春在这里" class='content_Inside'>疯狂世界 五月天</a><br>
+                        <a href="https://y.qq.com/n/ryqq/songDetail/003W0rCa3fqguj" title="最喜欢的青春在这里" class='content_Inside'>心要野 后海大鲨鱼</a><br>
+                        <a href="https://y.qq.com/n/ryqq/songDetail/000MW82Z2j20g2" title="最喜欢的青春在这里" class='content_Inside'>LOSER よねづ けんし</a><br>
 
                         `
                     }, 100);
