@@ -58,13 +58,14 @@ $("#button1").click(function () {
     }
     content.innerHTML = str;
     for (var i = 0; i <= 9; i++) {
-    fontsizeTemp[i] = parseInt( (Math.pow(hotsnum[i],1/2))/70);
+    fontsizeTemp[i] = parseInt( (Math.pow(hotsnum[i],1/2))/70);//平方算子
     }
     // 
     // hotsnum[i]/129380.731
     for (var i = 0; i <= 9; i++) {
         console.log("??")
     document.getElementsByClassName("hot")[i].style.fontSize = fontsizeTemp[i]+"px";
+    document.getElementsByClassName("content_Inside")[i].style.fontSize = fontsizeTemp[i]+"px"
     }
 
 });
@@ -84,6 +85,6 @@ $("#button2").click(function () {
 $("#button3").click(function () {
 
     content.innerHTML = `
-    <input type="text" >
+  
                         `
 });
