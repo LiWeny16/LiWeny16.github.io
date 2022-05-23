@@ -10,4 +10,4 @@ function randomColor() {//得到随机的颜色值
 var RGB=randomColor();
 console.log(RGB);
 
-document.getElementById("secondPage").style.background=`linear-gradient(to right top, #ffffff, ${RGB})`
+// document.getElementById("secondPage").style.background=`linear-gradient(to right top, #ffffff, ${RGB})`

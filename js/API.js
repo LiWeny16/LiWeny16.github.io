@@ -114,9 +114,9 @@ $("#button3").click(function () {
   
 });
 
-$("#timeBox").click(function () {
-   alert("Magic,time travel！");
-});
+// $("#timeBox").click(function () {
+//    alert("Magic,time travel！");
+// });
 $("#card2").click(function () {
     alert("I haven't made any eggs for this box,what a shame!\n(so is this an egg?I'm not sure about this...)");
  });
@@ -136,4 +136,11 @@ document.getElementById("card2").children[1].addEventListener("click", function(
 
 document.getElementById("footBox").children[2].addEventListener("click", function(){
     alert("Welcome！！");
+});
+
+document.getElementById("timeBox").addEventListener("mousedown",function(){
+    document.getElementsByClassName("bg")[0].style.filter="blur(3px)"
+});
+document.getElementById("timeBox").addEventListener("mouseup",function(){
+    document.getElementsByClassName("bg")[0].style.filter="blur(0px)"
 });
