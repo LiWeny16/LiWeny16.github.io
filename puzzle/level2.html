@@ -1,12 +1,28 @@
 <main>
     <div id="parent">
         <div id="children">
-            <span id="question">第一关</span><br>
+            <span id="question">第二关</span><br>
             <span id="hint">请进入下一关</span>
         </div>
     </div>
 </main>
 <style>
+      @keyframes fadeIn {
+        0% {
+            opacity: 0;
+            /*初始状态 透明度为0*/
+        }
+
+        50% {
+            opacity: 0;
+            /*中间状态 透明度为0*/
+        }
+
+        100% {
+            opacity: 1;
+            /*结尾状态 透明度为1*/
+        }
+    }
     body,
     main::before {
         background: url("../background/back3.jpg") 0 / cover fixed;
@@ -22,11 +38,13 @@
         height: 500px;
         line-height: 2;
         margin: auto;
-        border-radius: 5px;
-        background: rgba(255, 255, 255, 0.059);
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0);
         box-shadow: 3px 3px 6px 3px rgba(0, 0, 0, .3);
         overflow: hidden;
         caret-color: transparent;
+        animation: fadeIn 2s 1;
+        user-select: none;
     }
 
     main::before {
@@ -42,12 +60,12 @@
     }
 
     #question {
-        font-size: 30px;
+        font-size: 33px;
 
-        color: white;
+        color: rgba(255, 255, 255, 0.721);
     }
     #parent{
-        line-height:10;
+        line-height:9;
         text-align:center
     }
     #children {
@@ -55,7 +73,7 @@
         text-align: center;
     }
     #hint{
-        font-size: 15px;
-        color: white;
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.705);
     }
 </style>

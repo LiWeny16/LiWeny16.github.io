@@ -1,12 +1,29 @@
 <main>
     <div id="parent">
         <div id="children">
-            <span id="question">第二关</span><br>
-            <span id="hint">第三关还没做好嘻嘻</span>
+            <span id="question">第一关</span><br>
+            <a class="links" href="https://bigonion.xyz/puzzle/2">请进入下一关</a>
+            
         </div>
     </div>
 </main>
 <style>
+   @keyframes fadeIn {
+        0% {
+            opacity: 0;
+            /*初始状态 透明度为0*/
+        }
+
+        50% {
+            opacity: 0;
+            /*中间状态 透明度为0*/
+        }
+
+        100% {
+            opacity: 1;
+            /*结尾状态 透明度为1*/
+        }
+    }
     body,
     main::before {
         background: url("../background/back3.jpg") 0 / cover fixed;
@@ -23,10 +40,12 @@
         line-height: 2;
         margin: auto;
         border-radius: 5px;
-        background: rgba(255, 255, 255, 0.059);
+        background: rgba(255, 255, 255, 0);
         box-shadow: 3px 3px 6px 3px rgba(0, 0, 0, .3);
         overflow: hidden;
         caret-color: transparent;
+        animation: fadeIn 2s 1;
+        user-select: none;
     }
 
     main::before {
@@ -42,9 +61,9 @@
     }
 
     #question {
-        font-size: 30px;
+        font-size: 33px;
 
-        color: white;
+        color: rgba(255, 255, 255, 0.724);
     }
     #parent{
         line-height:10;
@@ -58,4 +77,14 @@
         font-size: 15px;
         color: white;
     }
+    .links {
+        color: rgba(255, 255, 255, .6);
+        text-decoration:none;
+    }
+
 </style>
+<script>
+    console.log("众里寻他千百度，慕然回首，");
+    console.log("那人却在灯火阑珊处。");
+    console.log("answer:armloop")
+</script>

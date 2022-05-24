@@ -1,12 +1,29 @@
 <main>
     <div id="parent">
         <div id="children">
-            <span id="question">欢迎来到ONION的puzzle环节</span><br>
-            <a  id="hint" href="https://bigonion.xyz/puzzle/level1">开始</a>
+            <span id="question">第五关</span><br>
+            <span class="hint">hint:</span><br>
+            <span class="hint">B level1</B></span>
         </div>
     </div>
 </main>
 <style>
+      @keyframes fadeIn {
+        0% {
+            opacity: 0;
+            /*初始状态 透明度为0*/
+        }
+
+        50% {
+            opacity: 0;
+            /*中间状态 透明度为0*/
+        }
+
+        100% {
+            opacity: 1;
+            /*结尾状态 透明度为1*/
+        }
+    }
     body,
     main::before {
         background: url("../background/back3.jpg") 0 / cover fixed;
@@ -22,11 +39,13 @@
         height: 500px;
         line-height: 2;
         margin: auto;
-        border-radius: 5px;
-        background: rgba(255, 255, 255, 0.059);
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0);
         box-shadow: 3px 3px 6px 3px rgba(0, 0, 0, .3);
         overflow: hidden;
         caret-color: transparent;
+        animation: fadeIn 2s 1;
+        user-select: none;
     }
 
     main::before {
@@ -42,23 +61,26 @@
     }
 
     #question {
-        font-size: 30px;
-
-        color: rgba(255, 255, 255, 0.705);
+        font-size: 33px;
+        display:inline-block;
+        color: rgba(255, 255, 255, 0.74);
+        padding: 120px 30px;
     }
     #parent{
-        line-height:10;
+        /* line-height:8; */
         text-align:center
     }
     #children {
         display:inline-block;
         text-align: center;
     }
-    #hint{
-        font-size: 15px;
-        color: white;
+    .hint{
+        display:inline-block;
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.744);
+        padding: 14px 30px;
     }
 </style>
 <script>
-    console.log("规则：内容与域名没有必然联系！答案首字母开头必定为小写")
+
 </script>
