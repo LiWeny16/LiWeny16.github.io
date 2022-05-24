@@ -118,7 +118,7 @@ $("#button4").click(function () {
 
     content.innerHTML = `
     
-    <a  class="links" href="https://bigonion.xyz/puzzle/">开始</a>
+    <a  class="links" href="https://bigonion.xyz/puzzle/">开始</a>  
                         `
 
 });
