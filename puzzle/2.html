@@ -1,0 +1,61 @@
+<main>
+    <div id="parent">
+        <div id="children">
+            <span id="question">第二关</span><br>
+            <span id="hint">第三关还没做好嘻嘻</span>
+        </div>
+    </div>
+</main>
+<style>
+    body,
+    main::before {
+        background: url("/Learning/sample/JavaScript/html/background/back3.jpg") 0 / cover fixed;
+    }
+
+    main {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 800px;
+        height: 500px;
+        line-height: 2;
+        margin: auto;
+        border-radius: 5px;
+        background: rgba(255, 255, 255, 0.059);
+        box-shadow: 3px 3px 6px 3px rgba(0, 0, 0, .3);
+        overflow: hidden;
+        caret-color: transparent;
+    }
+
+    main::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        filter: blur(20px);
+        z-index: -2;
+        margin: -30px;
+    }
+
+    #question {
+        font-size: 30px;
+
+        color: white;
+    }
+    #parent{
+        line-height:10;
+        text-align:center
+    }
+    #children {
+        display:inline-block;
+        text-align: center;
+    }
+    #hint{
+        font-size: 15px;
+        color: white;
+    }
+</style>
