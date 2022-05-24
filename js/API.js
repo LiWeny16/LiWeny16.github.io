@@ -16,7 +16,7 @@ function ajax1() {
         cache: true,
 
         success: function (result) {
-            document.getElementById("dayWord").innerText = result;
+            document.getElementById("dayWord").innerText = "「"+result+"」"
             console.log(result);
             console.log("本人不对调用的一言API负责，请理智判断其内容！")
         },
