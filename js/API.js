@@ -114,6 +114,15 @@ $("#button3").click(function () {
   
 });
 
+$("#button4").click(function () {
+
+    content.innerHTML = `
+    
+    <a  class="links" href="https://bigonion.xyz/puzzle/1">开始</a>
+                        `
+
+});
+
 $("#timeBox").click(function () {
    alert("Magic,time travel！");
 });
