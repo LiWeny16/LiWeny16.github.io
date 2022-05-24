@@ -5,8 +5,7 @@ document.addEventListener('keydown',function(e){    //对整个页面监听
     if(e.key=='Enter'){  
         if(anser=="柯南"||anser=="工藤新一"||anser=="洗衣机"){
             alert('Congratulations!');
-            // clearInterval(window.start);
-            // window.clearInterval(start);
+            window.location.href="https://bigonion.xyz/puzzle/level7"; 
         }
     }  
 })
