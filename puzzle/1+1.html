@@ -1,13 +1,25 @@
+<html>
 <main>
     <div id="parent">
         <div id="children">
-            <span id="question">第五关 蓦然回首</span><br>
-            <span class="hint">hint:</span><br>
-            <span class="hint">B level1</B></span>
+            <span id="question">第9.5关 白驹过隙</span><br>
+            <span class="hint"> hint：no hint</span><br>
+            <div class="wrapper">
+                <div>
+                    <input id="input" type="text" required="" />                 
+                </div>
+            </div>
         </div>
     </div>
 </main>
 <style>
+        input{
+            border-radius: 20px;
+            width: 20vw;
+            height: 4vh;
+            background: transparent;
+            color: rgba(255, 255, 255, 0.703);
+        }
       @keyframes fadeIn {
         0% {
             opacity: 0;
@@ -63,7 +75,7 @@
     #question {
         font-size: 33px;
         display:inline-block;
-        color: rgba(255, 255, 255, 0.74);
+        color: rgba(255, 255, 255, 0.705);
         padding: 120px 30px;
     }
     #parent{
@@ -77,11 +89,12 @@
     .hint{
         display:inline-block;
         font-size: 18px;
-        color: rgba(255, 255, 255, 0.744);
+        color: rgba(255, 255, 255, 0.705);
         padding: 14px 30px;
     }
 </style>
 <script>
-
 </script>
-<!-- 怕你看不懂，再再再给你一点点提示啦，这是某种汇编指令！ -->
+<script src="hintjs/forhalfnine.js"></script>
+<!-- hint：故技重施 -->
+</html>

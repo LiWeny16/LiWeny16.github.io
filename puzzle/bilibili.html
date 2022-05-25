@@ -1,14 +1,34 @@
+<html>
 <main>
     <div id="parent">
         <div id="children">
-            <span id="question">第五关 蓦然回首</span><br>
-            <span class="hint">hint:</span><br>
-            <span class="hint">B level1</B></span>
+            <span id="question">第十关 两极反转</span><br>
+            <span class="hint">You see, tenet wasn't <br>founded in the past.<br>
+
+                It will be founded in the future.</span><br>
+            <div class="wrapper">
+                <!-- <div>
+                    <input id="input" type="text" required="" />
+                </div> -->
+            </div>
         </div>
     </div>
 </main>
 <style>
-      @keyframes fadeIn {
+    input {
+        border-radius: 20px;
+        width: 20vw;
+        height: 4vh;
+        background: transparent;
+        color: rgba(255, 255, 255, 0.703);
+    }
+
+    @font-face {
+        font-family: Futura;
+        src: url('../Futura/Futura-Book-2.ttf');
+    }
+
+    @keyframes fadeIn {
         0% {
             opacity: 0;
             /*初始状态 透明度为0*/
@@ -24,6 +44,7 @@
             /*结尾状态 透明度为1*/
         }
     }
+
     body,
     main::before {
         background: url("../background/back3.jpg") 0 / cover fixed;
@@ -33,7 +54,7 @@
         position: absolute;
         top: 0;
         bottom: 0;
-        left: 0;
+        left: 0px;
         right: 0;
         width: 800px;
         height: 500px;
@@ -48,7 +69,7 @@
         user-select: none;
     }
 
-    main::before {
+    /* main::before {
         content: '';
         position: absolute;
         top: 0;
@@ -58,30 +79,35 @@
         filter: blur(20px);
         z-index: -2;
         margin: -30px;
-    }
+    } */
 
     #question {
         font-size: 33px;
-        display:inline-block;
-        color: rgba(255, 255, 255, 0.74);
+        display: inline-block;
+        color: rgba(255, 255, 255, 0.705);
         padding: 120px 30px;
     }
-    #parent{
+
+    #parent {
         /* line-height:8; */
-        text-align:center
+        text-align: center
     }
+
     #children {
-        display:inline-block;
+        display: inline-block;
         text-align: center;
     }
-    .hint{
-        display:inline-block;
+
+    .hint {
+        display: inline-block;
         font-size: 18px;
-        color: rgba(255, 255, 255, 0.744);
+        color: rgba(255, 255, 255, 0.705);
         padding: 14px 30px;
+        font-family: Futura;
     }
 </style>
 <script>
-
 </script>
-<!-- 怕你看不懂，再再再给你一点点提示啦，这是某种汇编指令！ -->
+<!-- 很抱歉，由于本人技术不好（菜就是菜（理直气壮，翻转过来后伪类不会翻转，毛玻璃效果就暂时去掉啦 -->
+
+</html>

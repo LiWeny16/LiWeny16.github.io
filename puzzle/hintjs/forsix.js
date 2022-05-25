@@ -10,3 +10,4 @@ document.addEventListener('keydown',function(e){    //对整个页面监听
     }  
 })
 // },1000)
+//这么简单的题目还要偷看我代码！

@@ -1,11 +1,1 @@
-document.addEventListener('keydown',function(e){    //对整个页面监听  
-   
-    var anser=document.getElementById("input").value;
-    if(e.key=='Enter'){  
-        if(anser=="#ffddee"||anser==="#FFDDEE"){
-            alert('Congratulations!');
-            window.location.href="https://bigonion.xyz/puzzle/"; 
-            alert("第九关还在筹备中啦！");
-        }
-    }  
-})
+document['addEventListener']('keydown',function(_0x4ce99f){var _0x19ddae=document['getElementById']('input')['value'];if(_0x4ce99f['key']=='Enter'){if(_0x19ddae=='#ffddee'||_0x19ddae==='#FFDDEE'){alert('Congratulations!');window['location']['href']='https://bigonion.xyz/puzzle/ffddee';alert('第九关还在筹备中啦！');}}});
