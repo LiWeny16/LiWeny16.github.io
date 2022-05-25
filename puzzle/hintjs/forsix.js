@@ -1,5 +1,5 @@
 // window.start=setInterval(function(){
-document.addEventListener('keydown',function(e){    //对整个页面监听  
+document.addEventListener('keydown',function(e){   
    
     var anser=document.getElementById("input").value
     if(e.key=='Enter'){  
