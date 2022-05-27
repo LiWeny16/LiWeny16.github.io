@@ -2,7 +2,7 @@
     <div id="parent">
         <div id="children">
             <span id="question">404</span><br>
-            <span class="hint">你好像给出了错误的答案捏-0-0</span><br>
+            <span class="hint"></span><br>
        
         </div>
     </div>
@@ -82,4 +82,19 @@
     }
 </style>
 <script>
+    let arr = new Array;
+
+    arr = [
+        '你好像给出了错误的答案捏-0-0',
+        'bad answer',
+        '我们不是很能理解你的这个答案',
+        '嗯，这个答案很奇怪，请让我们再想想',
+        '你堕入了无尽虚空。',
+        '这里是虚空',
+        '请再次确认你的答案！',
+        '喂喂喂，听得到吗',
+        '无线电波传送不到这里，嘟嘟',
+        '写不出来也不许生气,不然Onion会来抓你的（乐'];
+    i = Math.floor(Math.random() * arr.length);
+    document.getElementsByClassName('hint')[0].innerHTML = `${arr[i]}`
 </script>
