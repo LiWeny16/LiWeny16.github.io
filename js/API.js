@@ -82,6 +82,8 @@ $("#button2").click(function () {
     console.log("时间成本问题，没把所有音乐都下载下来，十分抱歉");
     setTimeout(() => {
     content.innerHTML = `
+                        <a href="https://y.qq.com/n/ryqq/songDetail/0003FhfU2GR1tu" title="太甜了" class='content_Inside'>爱你 王心凌</a><br>
+                        <a href="https://y.qq.com/n/ryqq/songDetail/003RZtvZ2I7EVr" title="还是阿信自己唱好听" class='content_Inside'>洋葱 五月天</a><br>
                         <a href="https://y.qq.com/n/ryqq/songDetail/000owYG21ojI0v" title="最喜欢的青春，在这里；—— 一个被世俗绊倒的女孩唱出来的歌曲" class='content_Inside'>青春 冷碗碗</a><br>
                         <a href="https://y.qq.com/n/ryqq/songDetail/002vzxVq1HyK8r" title="阿信16岁写的曲子，天才是对他最保守的评价" class='content_Inside'>不见不散 五月天</a><br>
                         <a href="https://y.qq.com/n/ryqq/mv/q0012myn3cb" title="苏打绿，是你唱出的一整个夏天" class='content_Inside'>他夏了夏天 苏打绿</a><br>
