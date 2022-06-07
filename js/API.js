@@ -125,6 +125,20 @@ $("#button4").click(function () {
 
 });
 
+$("#button5").click(function () {
+
+    content.innerHTML = `
+    <span class='content_Inside'>socks5代理科学上网免费订阅链接：</span><br>
+    <span class='content_Inside'>v2：https://drive.google.com/uc?export=download&id=1ea4XzbsEYij<br>Pe_ZEG3NSlGv8aSoQB8OS</span><br>
+    <span class='content_Inside'>clash：https://drive.google.com/uc?export=download&id=1yzyyTX0Y3Yai<br>MUi3zaP-Hw1H4otMocYW</span><br>
+    <span class='content_Inside'>免责声明：链接仅供学习使用，不得发布违法反动言论，切勿访问宗教色情犯罪领域，不谈论政治，不访问银行保护账户隐私</span>
+    
+                        `
+
+});
+
+
+
 $("#timeBox").click(function () {
    alert("Magic,time travel！");
 });
