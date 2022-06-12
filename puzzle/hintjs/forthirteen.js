@@ -1,5 +1,15 @@
-document.cookie="name=闯关者";
+
 setTimeout(function(){
-if(document.cookie[21]=='闯'&&document.cookie[22]=='关'&&document.cookie[23]=='者'){
-  alert("你好，闯关者");
-}},1000);
+if(document.cookie!=''){
+    var cookie=document.cookie;
+  //  str=cookie.substring(9);
+ //  alert("你好"+str);
+   cookie=cookie.substring(9);
+  alert('你好，你是？'+cookie+'吗');
+}
+else{
+
+    alert('恭喜你，你是nobody');
+
+}
+},3000);
