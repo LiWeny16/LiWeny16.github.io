@@ -1,0 +1,102 @@
+<html>
+<main>
+    <div id="parent">
+        <div id="children">
+            <span id="question">第十四关 精打细算</span><br>
+            <span class="hint"> &nbsp&nbsp&nbsp&nbsp &nbsp&nbspQ:这天，哆啦A梦在口袋里找到了1000个铜锣烧，但是它知道其中有一个铜锣烧肯定过期了，外表虽然看不出来，但是只要尝一尝就能知道,<b>即使同时吃下多个铜锣烧，哪怕是碎屑，也能立刻得知是否混进了过期的铜锣烧，</b>于是它拿出了时光机，
+                希望叫上其他时空的哆啦A梦来帮助它一起尝出是哪一个铜锣烧过期了，但是时光机今天之内的使用次数有限，不能叫无数只哆啦A梦。<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp问：最少需要叫几只其他时空的哆啦A梦来一起品尝，才能在他们第一次同时吃下后，立刻能找到过期的铜锣烧</span>
+            <div class="wrapper">
+                <div>
+                    <input id="input" type="text" required="" />                 
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<style>
+        input{
+            border-radius: 20px;
+            width: 20vw;
+            height: 4vh;
+            background: transparent;
+            color: rgba(255, 255, 255, 0.703);
+        }
+      @keyframes fadeIn {
+        0% {
+            opacity: 0;
+            /*初始状态 透明度为0*/
+        }
+
+        50% {
+            opacity: 0;
+            /*中间状态 透明度为0*/
+        }
+
+        100% {
+            opacity: 1;
+            /*结尾状态 透明度为1*/
+        }
+    }
+    body,
+    main::before {
+        background: url("../background/back3.jpg") 0 / cover fixed;
+    }
+
+    main {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 800px;
+        height: 500px;
+        line-height: 2;
+        margin: auto;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0);
+        box-shadow: 3px 3px 6px 3px rgba(0, 0, 0, .3);
+        overflow: hidden;
+        caret-color: transparent;
+        animation: fadeIn 2s 1;
+        user-select: none;
+    }
+
+    main::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        filter: blur(20px);
+        z-index: -2;
+        margin: -30px;
+    }
+
+    #question {
+        font-size: 33px;
+        display:inline-block;
+        color: rgba(255, 255, 255, 0.74);
+        padding: 52px 30px;
+    }
+    #parent{
+        /* line-height:8; */
+        text-align:center
+    }
+    #children {
+        display:inline-block;
+        text-align: center;
+    }
+    .hint{
+        display:inline-block;
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.744);
+        padding: 14px 30px;
+        text-align: left;
+    }
+</style>
+<script src="hintjs/forsix.js"></script>
+<!-- <script src="hintjs/forseven.js"></script> -->
+<script>
+</script>
+</html>
