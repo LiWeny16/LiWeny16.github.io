@@ -9,7 +9,8 @@ if(document.cookie!=''){
 }
 else{
 
-    alert('恭喜你，你是nobody');
+    alert('你好，你是nobody');
+    window.location.replace("https://www.bigonion.xyz/puzzle/wait");
 
 }
 },3000);
