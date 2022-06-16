@@ -347,11 +347,18 @@
 
     #timeBox {
 
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
         display: inline-block;
         font-size: 2vw;
         width: 20vw;
         height: 20vh;
-        position: relative;
+        /* position: relative; */
         top: 100px;
         bottom: 200px;
         left: 200px;
@@ -488,6 +495,26 @@
     var time = new Date();
     console.log("原来你会打开控制台！");
     console.log("现在的时间是："+time);
+   // var demo = document.querySelector('#timeBox')
+    var canitmove = false
+    var x = 0,
+        y = 0
+    demo.onmousedown = function (e) {
+        x = e.pageX - demo.offsetLeft
+        y = e.pageY - demo.offsetTop
+        canitmove = true
+        console.log(e.pageX)
+    }
+    window.onmouseup = function () {
+        canitmove = false
+    }
+    window.onmousemove = function (e) {
+        
+        if (canitmove) {
+            demo.style.left = e.pageX - x + 'px'
+            demo.style.top = e.pageY - y + 'px'
+        }
+    }
 </script>
 <script src="js/fadeIn.js"></script>
 <script src="js/rain.js"></script>
