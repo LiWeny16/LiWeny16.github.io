@@ -1,0 +1,141 @@
+<html>
+<main>
+    <div id="parent">
+        <div id="children">
+            <span id="question">第十七关 数字帝国</span><br>
+            <div id="p1">
+            <span class="q_hint">请输入您的RSA公钥对:(eg:[n,e])</span><br>
+            
+                <input id="input1" type="text" required="" />
+            </div>
+            <button>提交</button><br>
+            <div id="p2">
+            <span class="q_hint">请输入利用私钥解密后的答案:</span><br>
+            
+                <input id="input2" type="text" required="" />
+            </div>
+        </div>
+    </div>
+</main>
+<style>
+    .q_hint {
+        color: #fdffb1;
+        padding: 4px 0px;
+        display: inline-block;
+    }
+
+    #p1{
+        padding: 10px 0;
+    }
+    button {
+        width: 63px;
+        background-color: rgb(216, 216, 216);
+        border-radius: 5px;
+        padding: 0%;
+        top: 302.3px;
+        display: inline-block;
+
+
+    }
+
+    button:hover {
+        background-color: rgb(191, 191, 191);
+    }
+
+    button:active {
+        background-color: rgb(149, 149, 149);
+    }
+
+    input[type="text"] {
+        border-radius: 20px;
+        width: 20vw;
+        height: 4vh;
+        background: transparent;
+        color: rgba(255, 255, 255, 0.703);
+    }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+            /*初始状�? 透明度为0*/
+        }
+
+        50% {
+            opacity: 0;
+            /*中间状�? 透明度为0*/
+        }
+
+        100% {
+            opacity: 1;
+            /*结尾状�? 透明度为1*/
+        }
+    }
+
+    body,
+    main::before {
+        background: url("../background/back3.jpg") 0 / cover fixed;
+    }
+
+    main {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 800px;
+        height: 500px;
+        line-height: 2;
+        margin: auto;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0);
+        box-shadow: 3px 3px 6px 3px rgba(0, 0, 0, .3);
+        overflow: hidden;
+        caret-color: transparent;
+        animation: fadeIn 2s 1;
+        user-select: none;
+    }
+
+    main::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        filter: blur(20px);
+        z-index: -2;
+        margin: -30px;
+    }
+
+    #question {
+        font-size: 33px;
+        display: inline-block;
+        color: rgba(255, 255, 255, 0.74);
+        padding: 83px 30px;
+    }
+
+    #parent {
+        /* line-height:8; */
+        text-align: center
+    }
+
+    #children {
+        display: inline-block;
+        text-align: center;
+    }
+
+    .hint {
+        display: inline-block;
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.744);
+        padding: 14px 30px;
+    }
+</style>
+<script>
+    // hint:
+    console.log("请你生成一对RSA公钥私钥,并输入框1内提交,我会利用你的公钥加密后显示密文?");
+    console.log("请你获取加密文本后,利用你的私钥解密后在框2内输入我给你传输的内容明文");
+    console.log(`!!注意:e的取值不能超过10,且n必须大于100`);
+</script>
+<script src="hintjs/forsixteen.js"></script>
+</html>
