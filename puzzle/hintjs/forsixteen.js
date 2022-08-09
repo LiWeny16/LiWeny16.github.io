@@ -22,6 +22,9 @@ document.addEventListener('keydown', function (e) {
             if (n < 100 || e > 10 || e <= 1) {
                 alert('您输入的公钥数值范围不正确！')
             }
+            else if (ifQuality(n)){
+                alert('您输入的n为质数！请仔细检查！')
+            }
             else {
                 let code = 37//m<n    
                 let secretCode = Math.pow(code, e) % n
