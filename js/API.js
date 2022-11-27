@@ -105,7 +105,7 @@ $("#button3").click(function () {
     id="video"
     height=540vh 
     width=800 wh
-    src='https://vip.parwix.com:4433/player/?url=https://www.iqiyi.com/v_1wwd204s1iw.html' 
+    src='https://jx.jsonplayer.com/player/?url=https://www.iqiyi.com/v_121nxvu6qlo.html' 
     frameborder=0 
     allowfullscreen="true">
     </iframe>
