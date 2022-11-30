@@ -94,7 +94,7 @@ $("#button2").click(function () {
                         <a href="https://y.qq.com/n/ryqq/songDetail/002Op5LD0J8W93" title="好想好想离开这个世界啊！" class='content_Inside'>疯狂世界 五月天</a><br>
                         <a href="https://y.qq.com/n/ryqq/songDetail/003W0rCa3fqguj" title="录影棚歌手（嘻嘻）" class='content_Inside'>心要野 后海大鲨鱼</a><br>
                         <a href="https://y.qq.com/n/ryqq/songDetail/000MW82Z2j20g2" title="你唱的是winner，我是听的是loser" class='content_Inside'>LOSER よねづ けんし</a><br>
-
+                
                         `
                     }, 100);
 });
