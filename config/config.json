@@ -1,0 +1,19 @@
+[
+    {
+        
+        "uniPicUrl":"./",
+        "pic": {
+            "firstPage": "background/packImg/1.jfif",
+            "secondPage":"background/packImg/2.jpg",
+            "thirdPage":"background/packImg/3.jpg"
+        },
+        "uniMusicUrl":"./",
+        "music": {
+            "RADWIMPS - 夢灯籠": "music/RADWIMPS - 夢灯籠.mp3",
+            "RADWIMPS - デート":"music/RADWIMPS - デート.mp3",
+            "RADWIMPS - 前前前世":"music/RADWIMPS - 前前前世.mp3",
+            "RADWIMPS - はじめての、東京":"music/RADWIMPS - はじめての、東京.mp3",
+            "小雨":"music/%E5%B0%8F%E9%9B%A8.mp3"
+        }
+    }
+]

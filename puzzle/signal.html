@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes">
+    <meta name="keywords" content="puzzle，riddle" />
+    <meta name="author" content="bigonion,bigonion@bigonion.cn">
+    <meta name="description" content="Onoin的puzzle环节，考验你的思维与逻辑，灵感与坚定">
+    <!-- <meta name=”viewport” content=”width=device-width, initial-scale=1″ /> -->
+    <script src="https://cdn.jsdelivr.net/npm/bigonion-kit@0.9.13/umd/umd-kit.js"></script>
+    <title>Onoin的puzzle</title>
+</head>
+<main>
+    <div id="parent">
+        <div id="children">
+            <span id="question">第十三关 无名之辈</span><br>
+            <span class="hint">hint:</span><br>
+            <span class="hint">你好，你是？</span>
+        </div>
+    </div>
+</main>
+<style>
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+            /*初始状态 透明度为0*/
+        }
+
+        50% {
+            opacity: 0;
+            /*中间状态 透明度为0*/
+        }
+
+        100% {
+            opacity: 1;
+            /*结尾状态 透明度为1*/
+        }
+    }
+
+    body,
+    main::before {
+        background: url("../background/back3.jpg") 0 / cover fixed;
+    }
+
+    main {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 800px;
+        height: 500px;
+        line-height: 2;
+        margin: auto;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0);
+        box-shadow: 3px 3px 6px 3px rgba(0, 0, 0, .3);
+        overflow: hidden;
+        caret-color: transparent;
+        animation: fadeIn 2s 1;
+        user-select: none;
+    }
+
+    main::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        filter: blur(20px);
+        z-index: -2;
+        margin: -30px;
+    }
+
+    #question {
+        font-size: 33px;
+        display: inline-block;
+        color: rgba(255, 255, 255, 0.74);
+        padding: 120px 30px;
+    }
+
+    #parent {
+        /* line-height:8; */
+        text-align: center
+    }
+
+    #children {
+        display: inline-block;
+        text-align: center;
+    }
+
+    .hint {
+        display: inline-block;
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.744);
+        padding: 14px 30px;
+    }
+</style>
+<script src="hintjs/forthirteen.js"></script>
+
+</html>

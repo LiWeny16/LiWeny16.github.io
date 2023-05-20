@@ -1,0 +1,72 @@
+/* 
+ @name spread movetoRight fadeIn fadeOut large float
+*/
+
+@keyframes spread {
+  0% {
+    opacity: 0;
+    transform: scaleX(0.1);
+  }
+  100%{
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
+@keyframes movetoRight {
+  form {
+    left: 0px;
+  }
+  to {
+    left: 200px;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes large {
+  /* 25% {
+        transform: scale(1.1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    } */
+
+  100% {
+    transform: scale(1.08);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0px, 0px);
+  }
+
+  50% {
+    transform: translate(0px, -10px);
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+  }
+}

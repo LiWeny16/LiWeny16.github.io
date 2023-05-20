@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes">
+    <meta name="keywords" content="谜题，闯关，逻辑，思维，puzzle，riddle，logic" />
+    <meta name="author" content="bigonion,bigonion@bigonion.cn">
+    <meta name="description" content="Onoin的puzzle环节，考验你的思维与逻辑，灵感与坚定，谜题，闯关，逻辑，思维">
+    <!-- <meta name=”viewport” content=”width=device-width, initial-scale=1″ /> -->
+    <script src="https://cdn.jsdelivr.net/npm/bigonion-kit@0.9.13/umd/umd-kit.js"></script>
+    <title>Onoin的puzzle-闯关-</title>
+</head>
+
+<body>
+    <h1 style="display: none;">Onoin的puzzle环节，考验你的思维与逻辑，灵感与坚定，谜题，闯关，逻辑，思维</h1>
+    <main>
+        <div id="parent">
+            <div id="children">
+                <span id="question">欢迎来到ONION的puzzle环节</span><br>
+                <a id="hint" href="/puzzle/level1.html">Start</a>
+            </div>
+        </div>
+    </main>
+</body>
+
+<style>
+    body,
+    main::before {
+        background: url("../background/back3.jpg") 0 / cover fixed;
+    }
+
+    main {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 800px;
+        height: 500px;
+        line-height: 2;
+        margin: auto;
+        border-radius: 5px;
+        background: rgba(255, 255, 255, 0);
+        box-shadow: 3px 3px 6px 3px rgba(0, 0, 0, .3);
+        overflow: hidden;
+        caret-color: transparent;
+    }
+
+    main::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        filter: blur(20px);
+        z-index: -2;
+        margin: -30px;
+    }
+
+    #question {
+        font-size: 30px;
+
+        color: rgba(255, 255, 255, 0.705);
+    }
+
+    #parent {
+        line-height: 10;
+        text-align: center
+    }
+
+    #children {
+        display: inline-block;
+        text-align: center;
+    }
+
+    #hint {
+        font-size: 20px;
+        color: white;
+    }
+</style>
+<script>
+    console.log("规则1：内容与域名没有必然联系！\n子域名如果是字母开头，首字母必定为小写！")
+    console.log("规则2：请不要使用暴力手段破解，如'抓包'等")
+    console.log("规则3：规则2作废，你玩的开心就好！")
+    console.log("规则4：请认真阅读规则1")
+    console.log("规则5：请认真阅读规则1")
+    console.log("规则6：请不要删除url里面的puzzle")
+    console.log("规则7：我最不喜欢规则了，除非迫不得已")
+    console.log("提示1：请不要保持绝对的线性思维，也不要没有线性思维！")
+
+    console.log("最后，have fun！")
+
+    function checkCookie() {
+        var user = kit.getCookie("passerName")
+        if (user != "") {
+            console.log("欢迎回来 " + user)
+        }
+        else {
+            alert("由于本人家境贫寒所以目前只能挂载在免费的GitHub服务器上\n又因为GitHub服务器在国外，所以请您耐心等待直到背景图片加载完成再开始\n如果加载完了图片就会存在缓冲区，那么接下来的闯关就不会卡了")
+            user = prompt("英雄请留名:", "闯关者")
+            if (user != "" && user != null) {
+                kit.setCookie("passerName", user, 365)
+            }
+        }
+    }
+    checkCookie()
+</script>
+
+</html>

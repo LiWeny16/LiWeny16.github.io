@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- seo -->
+    <meta name="baidu-site-verification" content="codeva-zQ1tssltKk" /> <!-- 百度 -->
+    <meta name="msvalidate.01" content="411D1135BD0F14F46E1AE89FE6D56B0B" /> <!-- 必应-->
+    <meta name="360-site-verification" content="1c7efd17201ad53d55d504c0c1060538" /> <!-- 360-->
+    <meta name="google-site-verification" content="9FW6GAfTY7G0K-EZp7WnBea4W_F1J6YZtPm_BsSPKoE" /><!-- google-->
+    <meta name="sogou_site_verification" content="KQHLM4xA1k" /><!-- 搜狗-->
+    <meta name="shenma-site-verification" content="f7fb610cdfd256ae12822e93ca136c43_1680371744" /><!-- 神马 -->
+    <meta name="bytedance-verification-code" content="KbrppkYzTgbPdVsAL3AY" /><!-- 头条 -->
+
+    <!-- /seo -->
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes">
+    <meta name="keywords" content="大聪花的家,大聪花,bigonion,大聪,聪花,大葱花,markdown在线编辑,puzzle,OpenAI,Markdwon,Music,Onion的主页,大聪花家,好聪花" />
+    <meta name="author" content="bigonion,bigonion@bigonion.cn">
+    <meta name="robots" content="index,follow" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="description"
+        content="bigonion大聪花的个人主页,博客，包含线性代数,软路由的玩法教学等,markdown在线编辑显示,以及一些音乐推荐和创作,有趣的Chatgpt3.5 OpenAI免费模型和markdown在线渲染网页,每日热搜榜单,和一些有意思的JavaScript、Nodejs、C、golang项目。预计未来新增：同步听歌">
+    <!-- <meta name=”viewport” content=”width=device-width, initial-scale=1″ /> -->
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+
+    <script src="https://cdn.jsdelivr.net/npm/bigonion-kit/umd/umd-kit.min.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!--  -->
+    <!-- <script async="false" src="js/getConfig.js"></script> -->
+    <!-- <script async="false" src="css/index.js"></script> -->
+    <script async src="js/packJs/API.min.js"></script>
+    <!-- <script defer="defer" src="js/h5InJs/index.js"></script> -->
+    <!-- <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) }
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y)
+        })(window, document, "clarity", "script", "fzvsvhj08x");
+    </script> -->
+    <title>大聪花的家 | Bigonion's Home Page</title>
+    <link rel="stylesheet" href="./css/keyframes.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/myProject.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+</style>
+
+
+<body>
+    <h1 style="display: none;">Bigonion's personal homepage, blog, as well as some music recommendations and creations,
+        the interesting Chappt3 OpenAI free model and online rendering page of markdown, the daily hot search list, and
+        some interesting JavaScript, Nodejs, C, and golang projects. Expected to be added in the future: simultaneous
+        music listening</h1>
+    <div id="rainBox"></div>
+    <div id="firstPage" class="FLEX">
+        <div id="firstPageHeader" class="FLEX">
+            <div id="firstPageInner" class="FLEX">
+                <div id="iconBox">
+                    <h2>
+                        <span><img class="logo" title="logo" src="./favicon.ico" alt="浏览器不支持，请更换chrome内核"></span>
+                        <span>BIGONION SPACE</span>
+                    </h2>
+                </div>
+                <div id="linksBox" class="FLEX">
+                    <h2 class="rightHeaderH2">
+                        <a href="https://bigonion.cn/links/">友链</a>
+
+                    </h2>
+                    <h2 class="rightHeaderH2">
+                        <a href="https://bigonion.cn/blog/">博客</a>
+                    </h2>
+                    <h2 id="aboutMe" class="rightHeaderH2">
+                        <a href="https://bigonion.cn/about/index.html">关于</a>
+                    </h2>
+                </div>
+                <div id="loginBox" style="display: none;" class="FLEX">
+                    <span id="welcomeUser">欢迎，</span>
+                    <a id="logIn" href="https://ecs.bigonion.cn/login.html">登录</a>
+                    <a id="logOut" href="">登出</a>
+                </div>
+            </div>
+        </div>
+        <div id="firstPageContent" class="FLEX">
+            <div id="card1topBox" class="FLEX">
+                <div id="timeBox_container" class="FLEX">
+                    <div id="timeBox">
+                        <!-- time here -->
+                    </div>
+                </div>
+
+                <div class="card_outside FLEX">
+                    <div class="card_inside">
+                        <!-- <img src="background/back.jpg" alt=""> -->
+                        <div>
+                            <span>欢迎来到Onion主页</span>
+                            <!-- <audio controls="controls">
+                              <source src="music/璃月港.mp3" type="audio/mpeg">
+                      Your browser does not support the audio element.
+                      </audio> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="card2topBox" class="FLEX">
+                <div id="card2" class="FLEX">
+                    <span>最喜欢的乐队RADWIMPS的专辑</span>
+                    <audio controls="controls" preload="metadata">
+                        <source src="./music/RADWIMPS - 夢灯籠.mp3" type="audio/mpeg">
+                    </audio>
+                    <audio id="stmusic" controls="controls" preload="metadata">
+                        <source src="./music/RADWIMPS - デート.mp3" type="audio/mpeg">
+                    </audio>
+                    <audio controls="controls" preload="metadata">
+                        <source src="./music/RADWIMPS - 前前前世.mp3" type="audio/mpeg">
+                    </audio>
+                    <audio controls="controls" preload="metadata">
+                        <source src="./music/RADWIMPS - はじめての、東京.mp3" type="audio/mpeg">
+                    </audio>
+                    <audio id="bgmusic" src="music/小雨.mp3" loop="true" preload="metadata"></audio>
+                </div>
+            </div>
+            <div id="eggs">
+                <span>更新了时间<span><br>
+                        <span>微博API<span><br>
+                                <span>点一下欢迎语会下雨哦！<span><br>
+                                        <span>也是不刷新回不来的那种-0-0</span>
+                                        <span>更新了flex布局</span>
+            </div>
+        </div>
+        <div id="footBox" class="FLEX">
+            <span>"2023"</span>
+            <span id="dayWord"></span>
+            <a href="https://space.bilibili.com/394914809" title="Onion的bilibili主页" class="links">Onion</a>
+        </div>
+    </div>
+    <!-- <HR style="FILTER: alpha(opacity=100,finishopacity=0,style=1)" width="100%" color=#FFDDEE SIZE=3> -->
+    </div>
+    <div id="secondPage">
+        <div id="navigationBar">
+            <input type="button" id="button1" class="button" value="今日微博热搜" /><br>
+            <input type="button" id="button2" class="button" value="Onion&音乐" /><br>
+            <input type="button" id="button3" class="button" value="Onion在看的视频" /><br>
+            <input type="button" id="button4" class="button" value="Onion的puzzle" /><br>
+            <!-- <input type="button" id="button5" class="button" value="魔法" /> -->
+        </div>
+        <!-- <div class="divider">
+        </div> -->
+        <div id="content_Top">
+            <!-- <div class="guideContent FLEX">
+                <span>阅读推荐</span>
+            </div> -->
+            <!-- <iframe id="recommand" width="760" height="415" style="translate: 0px 9vh;"
+                src="https://musiclab.chromeexperiments.com/Song-Maker/embed/5510439655178240" frameborder="0"
+                allowfullscreen></iframe> -->
+        </div>
+    </div>
+    <div id="thirdPage">
+        <div id="myProjectheader">
+            Onion's Project
+        </div>
+        <div id="proContentBoxTop">
+            <div id="isproFinished">
+                <span id="inProgress">processing</span>
+                <span id="finished">finished</span>
+            </div>
+            <div id="projectBox">
+                <div id="classifyProject">
+                </div>
+                <div id="projectCardBox">
+
+                    <div class="projectCard one" onload="">
+                    </div>
+                    <div class="projectCard two">
+                    </div>
+                    <div class="projectCard three">
+                    </div>
+                    <div class="projectCard four">
+                    </div>
+                    <div class="projectCard five">
+
+                    </div>
+                    <div class="projectCard six">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="thirdPageFooter" class="FLEX">
+            <!-- <div style="width:300px;margin:0 auto; padding:20px 0;"> -->
+            <span>
+                <img src="./background/projectImg/备案图标.png" alt="浏览器不支持，请更换chrome内核">
+                <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=45020202000414"
+                    style="display:inline-block;text-decoration:none;">
+                    <p style="color:rgba(255, 255, 255, 0.892);">
+                        桂公网安备
+                        45020202000414号</p>
+                </a>
+            </span>
+            <!-- </div>                       -->
+            <span><a href="https://beian.miit.gov.cn">桂ICP备2023000518号-1</a></span>
+            <span>Copyright © 2022 - 2023 </span>
+            <span><a href="mailto:bigonion@bigonion.cn">bigonion@bigonion.cn</a></span>
+        </div>
+    </div>
+
+</body>
+<script>
+    console.log("欢迎");
+</script>
+<!-- 填充 -->
+<!-- 填充 -->
+<script src="js/packJs/time.min.js"></script>
+<script src="js/packJs/fadeIn.min.js"></script>
+<script src="js/packJs/rain.min.js"></script>
+<!-- <script src="js/packJs/bg.min.js"></script> -->
+<script defer="defer" src="js/packJs/myProject.min.js"></script>
+<script src="js/packJs/scroll.min.js"></script>
+<!-- <script src="js/topHeader.js"></script> -->
+
+</html>
+<!-- /* -webkit-animation-name: fadeIn; 动画名称
+-webkit-animation-duration: 3s; 动画持续时间
+-webkit-animation-iteration-count: 3; 动画次数
+-webkit-animation-delay: 0s; 延迟时间
+-webkit-animation:mymove 5s infinite;  */ -->

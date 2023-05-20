@@ -1,0 +1,12 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "<!-- HEAD -->\r   <meta name=\"keywords\" content=\"OpenAI,bigonion,Markdwon,Music\" />\r   <meta name=\"author\" content=\"bigonion,bigonion@bigonion.cn\">\r   <meta name=\"description\"\r     content=\"Bigonion的个人主页,博客,以及一些音乐推荐和创作,有趣的Chatgpt3 OpenAI免费模型和markdown在线渲染网页,每日热搜榜单,和一些有意思的JavaScript、Nodejs、C、golang项目。预计未来新增：同步听歌\">\r <!-- HEAD -->",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

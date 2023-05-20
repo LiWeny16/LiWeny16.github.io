@@ -1,0 +1,187 @@
+#thirdPage {
+    display: none;
+    flex-direction: column;
+    /* height: 100vh; */
+    background: #fffff7;
+    background: url(#) center center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    /* animation: fadeIn 1.4s 1; */
+}
+
+#myProjectheader {
+    font-size: 6vh;
+    text-align: center;
+    margin: 20px;
+}
+
+#proContentBoxTop {
+    display: flex;
+    flex: 0 0 84vh;
+    flex-direction: column;
+}
+
+#isproFinished {
+    text-align: center;
+    font-size: 3vh;
+}
+
+#isproFinished #inProgress {
+    background-color: black;
+    border-radius: 3px;
+}
+
+.projectCard:hover {
+    /* animation:large 0.7s 1; */
+    transform: scale(1.08);
+}
+
+#classifyProject {
+    text-align: center;
+}
+
+#projectCardBox {
+    margin: 29px 163px;
+    /* 声明一个容器 */
+    display: grid;
+    /*  声明列的宽度  */
+    grid-template-columns: repeat(3, auto);
+    /*  声明行间距和列间距  */
+    grid-gap: 20px;
+    /*  声明行的高度  */
+    grid-template-rows: auto auto;
+    justify-items: center;
+}
+
+.projectCard {
+    /* display: none; */
+    /* opacity: 5%; */
+    text-align: center;
+    background: #ffffffa1;
+    color: black;
+    box-shadow: 5px 5px 10px 2px rgb(0 0 0 / 83%);
+    border-radius: 8px;
+    height: 34vh;
+    width: 39vh;
+    transition: width 2s, height 2s, transform 0.6s;
+    /* animation: fadeIn 0.8s 1; */
+    will-change: transform; 
+    height: fit-content;
+}
+
+.fadeIn {
+    animation: fadeIn 2s 1;
+}
+
+.fadeOut {
+    animation: fadeOut 2s 1;
+}
+
+.one {
+    animation: fadeIn 0.6s 1;
+    animation-fill-mode: forwards;
+}
+
+.two {
+    animation: fadeIn 1.0s 1;
+    animation-fill-mode: forwards;
+}
+
+.three {
+    animation: fadeIn 1.4s 1;
+    animation-fill-mode: forwards;
+}
+
+.four {
+    animation: fadeIn 1.6s 1;
+    animation-fill-mode: forwards;
+}
+
+.five {
+    animation: fadeIn 1.9s 1;
+    animation-fill-mode: forwards;
+}
+.six{
+    animation: fadeIn 2.1s 1;
+    animation-fill-mode: forwards;
+}
+/* project-CARD-inner */
+
+.cardSvg {
+    width: 143px;
+    caret-color: transparent;
+}
+
+.procardInner {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    height: 100%;
+}
+
+.cardImgBox {
+    background: white;
+    border-top-left-radius: 7px;
+    border-top-Right-radius: 7px;
+    cursor: pointer;
+}
+
+.proIntro {
+    font-size: 2.1vh;
+    flex-basis: 20%;
+    margin-top: 1vw;
+}
+
+.protagInner {
+    font-size: 16px;
+}
+
+.protag {
+    background-image: linear-gradient(to right, #5ab886 10%, #2881b8cf 90%);
+    border-radius: 4px;
+    margin: 4px;
+    padding: 2px;
+    font-size: 14px;
+    z-index: 999;
+}
+.protagBox{
+    margin-top: 1vw;
+    margin-bottom: 0.8vw;
+}
+#thirdPageFooter{
+    flex: 0 0 6vh;
+    align-items: baseline;
+    justify-content: center;
+    font-size: 2vh;
+}
+#thirdPageFooter a{
+    font-size: 2vh;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.892);
+}
+#thirdPageFooter span{
+    margin-right: 2vw;
+}
+
+
+.Pink {
+    background-image: linear-gradient(to right, #FFDDEE 10%, skyblue 90%);
+}
+
+.Gold {
+    background-image: linear-gradient(to right, #fbffb7 10%, #838f3ccf 90%)
+}
+
+.Red {
+    background-image: linear-gradient(to right, #c00000 10%, #ffffffc9 90%)
+}
+
+.Purple {
+    background-image: linear-gradient(to right, #6f5ab8 10%, #60c2ffcf 90%);
+}
+
+.Blue{
+    background-image: linear-gradient(to right, #4eb7f8 10%, #d5a2ffb3 90%);
+}
+

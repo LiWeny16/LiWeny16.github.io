@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Bigonion的主页，但是404">
+    <link rel="stylesheet" href="https://bigonion.cn/css/keyframes.css">
+    <title>404 你的页面未找到</title>
+</head>
+
+<body>
+    <main>
+        <div id="parent">
+            <div id="children">
+                <span id="question">404</span><br>
+                <span class="hint"></span><br>
+
+            </div>
+        </div>
+    </main>
+</body>
+<script>
+    let arr = new Array
+
+    arr = [
+        '你好像给出了一个，额，暂时错误的答案',
+        'bad answer',
+        '我们不是很能理解你的这个答案',
+        '嗯，这个答案很奇怪，请让我们再想想',
+        '你堕入了无尽虚空。',
+        '这里是虚空',
+        '请再次确认你的答案！',
+        '喂喂喂，听得到吗',
+        '无线电波传送不到这里，嘟嘟',
+        '凡事都有一个与一望而知而不同的真相',
+        '你好，小笼包，谢谢，再见',
+        '这里不是旅途的终点，而是旅途的意义',
+        '404就是，嗯，你懂的',
+        '你就像月亮一样，皎洁而让人迷惑',
+        '这里什么都没有，除了我',
+        '光明照不到这里，黑暗才是永恒的',
+        '又见面了，是在看我有几句话吗',
+        '深渊是什么，是自己的心',
+        '是谁需要被拯救，是人类，还是你的答案',
+        '我不清楚这世界为谁而转，因为可能是宇宙在转'
+    ]
+    i = Math.floor(Math.random() * arr.length)
+    document.getElementsByClassName('hint')[0].innerHTML = `${arr[i]}`
+</script>
+<style>
+    /* @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    } */
+
+    body,
+    main::before {
+        background: url("https://bigonion.cn/background/packImg/2.jpg") 0 / cover fixed;
+    }
+
+    body {
+        animation: fadeIn 0.5s 1;
+    }
+
+    main {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 800px;
+        height: 500px;
+        line-height: 2;
+        margin: auto;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0);
+        box-shadow: 3px 3px 6px 3px rgba(0, 0, 0, .3);
+        overflow: hidden;
+        caret-color: transparent;
+        animation: fadeIn 2s 1;
+        user-select: none;
+    }
+
+    main::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        filter: blur(20px);
+        z-index: -2;
+        margin: -30px;
+    }
+
+    #question {
+        font-size: 35px;
+        display: inline-block;
+        color: rgba(255, 255, 255, 0.74);
+        padding: 120px 30px;
+    }
+
+    #parent {
+        /* line-height:8; */
+        text-align: center
+    }
+
+    #children {
+        display: inline-block;
+        text-align: center;
+    }
+
+    .hint {
+        display: inline-block;
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.744);
+        padding: 14px 30px;
+    }
+</style>
+
+</html>

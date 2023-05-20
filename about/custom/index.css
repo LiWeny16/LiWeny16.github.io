@@ -1,0 +1,36 @@
+code {
+  font-size: 17px;
+}
+@font-face {
+    font-family: Futura;
+    src: url('../assets/font/Futura/Futura-Book-2.ttf');
+}
+/*  */
+
+.chartPic{
+  width: 86%;
+  /* margin: 0px 20px !important; */
+} 
+.FLEX{
+  display: flex;
+}
+
+.GRID4{
+  display: grid;
+  grid-template-columns: repeat(2,auto);
+  grid-gap: 20px;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+.GRID2{
+  display: grid;
+  grid-template-columns: repeat(2,auto);
+  grid-gap: 20px;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+.GRID2 img{
+  width: 100% !important;
+}

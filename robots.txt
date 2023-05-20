@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /puzzle/.html$
+Allow: /blog/.html$
+Allow: /MarkdownOnline/.html$
+Disallow: .gif$
+
+
+

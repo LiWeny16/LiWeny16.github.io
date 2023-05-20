@@ -1,0 +1,107 @@
+/* 响应式布局 */
+@media (max-width: 320px) {
+}
+
+@media (min-width: 321px) and (max-width: 375px) {
+}
+
+@media (min-width: 376px) and (max-width: 425px) {
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+}
+/* 电脑端 */
+@media (min-width: 769px) and (max-width: 1236px) {
+  #projectCardBox {
+    grid-template-columns: repeat(2, auto);
+    margin: 13px 0px;
+  }
+
+  #thirdPage {
+    height: fit-content;
+  }
+}
+/* 手机端 */
+@media (max-width: 769px) {
+  /* 推荐栏 */
+  #recommand{
+    display: none;
+  }
+  /* 导航栏适配 */
+  #iconBox > h2 > span:nth-child(2) {
+    font-size: 5vw;
+}
+  #loginBox a {
+    margin: 10px 5px;
+  }
+  #linksBox a {
+    margin: 10px 5px;
+  }
+  /* 移动端图标不展示 */
+  #iconBox > h2 > span:nth-child(1) > img {
+    display: none;
+  }
+  #composition_1 video {
+    width: 51vw;
+    transition: 1s;
+  }
+  #composition_2 video {
+    width: 51vw;
+    transition: 1s;
+  }
+  #thirdPageFooter {
+    align-items: center;
+  }
+  .card_inside span {
+    font-size: 3.4vh;
+  }
+
+  #timeBox {
+    font-size: 4vh;
+  }
+
+  #timeBox_container {
+    flex: 0 0 31%;
+  }
+
+  #projectCardBox {
+    grid-template-columns: repeat(1, auto);
+    margin: 13px 0px;
+  }
+
+  #thirdPage {
+    height: fit-content;
+  }
+  #thirdPageFooter {
+    flex-direction: column;
+  }
+  #firstPage {
+    flex-direction: column;
+  }
+
+  #firstPageContent {
+    flex-direction: column;
+  }
+
+  #card2topBox {
+    flex: auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #card1topBox {
+    flex-direction: column;
+    flex: 0 0 35%;
+  }
+
+  audio {
+    margin: 18px 14px;
+    width: 93%;
+  }
+}
+
+@media (max-height: 760px) and (max-width: 760px) {
+  #card2 {
+    height: 47vh;
+  }
+}

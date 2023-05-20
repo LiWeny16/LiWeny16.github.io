@@ -1,0 +1,20 @@
+{
+  "name": "liweny16.github.io",
+  "version": "1.0.0",
+  "description": "--------",
+  "main": "init.js",
+  "scripts": {
+    "blog": "node ./init.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LiWeny16/LiWeny16.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LiWeny16/LiWeny16.github.io/issues"
+  },
+  "homepage": "https://github.com/LiWeny16/LiWeny16.github.io#readme"
+}
