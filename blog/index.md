@@ -4,13 +4,15 @@
 
 ## 目录:
 
-<!-- HEAD -->
-  <title>大聪花的博客</title>
+  <!-- HEAD -->
+  <!-- <title>大聪花的博客</title>
   <meta name="keywords" content="博客,blog,大聪花,OpenAI,bigonion,Markdwon" />
   <meta name="author" content="bigonion,bigonion@bigonion.cn">
-  <meta name="description"
-    content="Bigonion大聪花的博客,博客,包含人工智能，AI,BP神经网络，JavaScript，线性代数，自控原理，现代控制理论的知识...未完待续">
-<!-- HEAD -->
+  <meta name="description" content="Bigonion大聪花的博客,博客,包含人工智能，AI,BP神经网络，JavaScript，线性代数，自控原理，现代控制理论，串口通讯等等知识...持续更新中...">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css"> -->
+  <!-- HEAD -->
 
 ---
 
@@ -19,6 +21,8 @@
 <details id="latestList" class="details">
 <summary>展开</summary>
 <br>
+
+<a href="./articles/2023/什么是 RS232 串口通讯.html">什么是 RS232 串口通讯协议？</a><br><br>
 
 <a href="./articles/2023/axios如何让请求走socks或http代理Proxy？.html">axios如何让请求走socks/http代理Proxy？</a><br><br>
 
