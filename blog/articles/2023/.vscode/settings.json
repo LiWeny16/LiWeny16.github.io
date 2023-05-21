@@ -6,5 +6,6 @@
             "comments": "on",
             "strings": "on"
         }
-    }
+    },
+    "markdown-preview-enhanced.scrollSync": false
 }

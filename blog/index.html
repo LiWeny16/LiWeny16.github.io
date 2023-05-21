@@ -1,7 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 
 <head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
   <title>大聪花的博客</title>
   <meta name="keywords" content="博客,blog,大聪花,OpenAI,bigonion,Markdwon" />
   <meta name="author" content="bigonion,bigonion@bigonion.cn">
@@ -9,6 +14,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
+
+
+
+
+
+
+
+
   <style>
     /**
  * prism.js Github theme based on GitHub's theme.
@@ -847,13 +860,6 @@
     <h2 class="mume-header" id="%E7%9B%AE%E5%BD%95">&#x76EE;&#x5F55;:</h2>
 
     <!-- HEAD -->
-    <!-- <title>大聪花的博客</title>
-  <meta name="keywords" content="博客,blog,大聪花,OpenAI,bigonion,Markdwon" />
-  <meta name="author" content="bigonion,bigonion@bigonion.cn">
-  <meta name="description" content="Bigonion大聪花的博客,博客,包含人工智能，AI,BP神经网络，JavaScript，线性代数，自控原理，现代控制理论，串口通讯等等知识...持续更新中...">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css"> -->
     <!-- HEAD -->
     <hr>
     <h2 class="mume-header" id="2023">2023</h2>
@@ -861,6 +867,9 @@
     <details id="latestList" class="details">
       <summary>&#x5C55;&#x5F00;</summary>
       <br>
+      <p><a
+          href="./articles/2023/&#x5230;&#x5E95;&#x4EC0;&#x4E48;&#x662F;&#x6BD4;&#x7279;&#x7387;&#x548C;&#x6CE2;&#x7279;&#x7387;&#xFF1F;.html">&#x5230;&#x5E95;&#x4EC0;&#x4E48;&#x662F;&#x6BD4;&#x7279;&#x7387;&#x548C;&#x6CE2;&#x7279;&#x7387;&#xFF1F;</a><br><br>
+      </p>
       <p><a
           href="./articles/2023/&#x4EC0;&#x4E48;&#x662F; RS232 &#x4E32;&#x53E3;&#x901A;&#x8BAF;.html">&#x4EC0;&#x4E48;&#x662F;
           RS232 &#x4E32;&#x53E3;&#x901A;&#x8BAF;&#x534F;&#x8BAE;&#xFF1F;</a><br><br></p>
@@ -965,6 +974,52 @@
     </description>
 
   </div>
+  <div class="md-sidebar-toc">
+    <div class="md-toc">
+      <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+        <a href="#&#x6B22;&#x8FCE;&#x6765;&#x5230;-onion-&#x7684;&#x535A;&#x5BA2;" class="md-toc-link">
+          <p>&#x6B22;&#x8FCE;&#x6765;&#x5230; Onion &#x7684;&#x535A;&#x5BA2;</p>
+
+        </a>
+      </div>
+      <details style="padding:0;;padding-left:0px;" open>
+        <summary class="md-toc-link-wrapper">
+          <a href="#&#x4E3B;&#x9875;httpsbigonioncn" class="md-toc-link"></a>
+          <p><a href="#&#x4E3B;&#x9875;httpsbigonioncn" class="md-toc-link"></a><a
+              href="https://bigonion.cn">&#x4E3B;&#x9875;</a></p>
+
+        </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+            <a href="#&#x76EE;&#x5F55;" class="md-toc-link">
+              <p>&#x76EE;&#x5F55;:</p>
+
+            </a>
+          </div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+            <a href="#2023" class="md-toc-link">
+              <p>2023</p>
+
+            </a>
+          </div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+            <a href="#2022" class="md-toc-link">
+              <p>2022</p>
+
+            </a>
+          </div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+            <a href="#2021" class="md-toc-link">
+              <p>2021</p>
+
+            </a>
+          </div>
+        </div>
+      </details>
+
+    </div>
+  </div>
+  <a id="sidebar-toc-btn">&#x2261;</a>
 
 
 
@@ -973,7 +1028,18 @@
 
 
 
+  <script>
 
+    var sidebarTOCBtn = document.getElementById('sidebar-toc-btn')
+    sidebarTOCBtn.addEventListener('click', function (event) {
+      event.stopPropagation()
+      if (document.body.hasAttribute('html-show-sidebar-toc')) {
+        document.body.removeAttribute('html-show-sidebar-toc')
+      } else {
+        document.body.setAttribute('html-show-sidebar-toc', true)
+      }
+    })
+  </script>
 
 
 </body>
