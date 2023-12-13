@@ -22,6 +22,9 @@
 <details id="latestList" class="details">
 <summary>展开</summary>
 <br>
+<a href="./articles/2023/如何消除JS异步传染性.html">如何消除JS异步传染性？</a><br><br>
+
+
 
 <a href="./articles/2023/到底什么是比特率和波特率？.html">到底什么是比特率和波特率？</a><br><br>
 

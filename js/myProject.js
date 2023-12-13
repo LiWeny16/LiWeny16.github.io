@@ -6,11 +6,11 @@ function linkTo(my_url) {
 
 
     function createNewproCard(link, imgSrc, Intro, proTagObj) {
-        if(Intro.length<=25){
-            Intro = Intro+"<br>&nbsp;" //保持统一
+        if (Intro.length <= 25) {
+            Intro = Intro + "<br>&nbsp;" //保持统一
         }
-        if(Intro.length>43){
-            Intro = Intro.substring(0,42)+"..."
+        if (Intro.length > 43) {
+            Intro = Intro.substring(0, 42) + "..."
         }
         var protagInner = '' //处理介绍语长度并保证不溢出
         for (let i in proTagObj) {
@@ -63,7 +63,7 @@ function linkTo(my_url) {
             {
                 electron: "Blue",
                 Nodejs: "",
-                跨平台文件快传:"Pink"
+                跨平台文件快传: "Pink"
             }
         )}
         `
