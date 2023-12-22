@@ -51,21 +51,21 @@ function ajax1() {
     })
 }
 // 立即请求
-$.ajax({
-    type: "POST",
-    url: "https://tenapi.cn/resou/",
-    async: true,
+// $.ajax({
+//     type: "POST",
+//     url: "https://tenapi.cn/resou/",
+//     async: true,
 
-    dataType: 'JSON',
-    success: function (result) {
-        json1 = result
-        console.log(json1)
-        console.log(json1.list.length)
-        for (var i = 0; i <= json1.list.length - 1; i++) {
-            hotsnum[i] = json1.list[i].hot
-        }
-    },
-})
+//     dataType: 'JSON',
+//     success: function (result) {
+//         json1 = result
+//         console.log(json1)
+//         console.log(json1.list.length)
+//         for (var i = 0; i <= json1.list.length - 1; i++) {
+//             hotsnum[i] = json1.list[i].hot
+//         }
+//     },
+// })
 $("#button1").click(function () {
 
     var str = ""
