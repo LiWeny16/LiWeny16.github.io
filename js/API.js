@@ -66,35 +66,35 @@ function ajax1() {
 //         }
 //     },
 // })
-$("#button1").click(function () {
+// $("#button1").click(function () {
 
-    var str = ""
-    for (var i = 0; i < 10; i++) {
-        str += `
-                <a href="https://cn.bing.com/search?q=${json1.list[i].name}" target="_blank"><p class='content_Inside'>top${i + 1}:${json1.list[i].name}</p></a><br>
-                <p class='hot'>热度: ${json1.list[i].hot}</p><br>
-                `
+//     var str = ""
+//     for (var i = 0; i < 10; i++) {
+//         str += `
+//                 <a href="https://cn.bing.com/search?q=${json1.list[i].name}" target="_blank"><p class='content_Inside'>top${i + 1}:${json1.list[i].name}</p></a><br>
+//                 <p class='hot'>热度: ${json1.list[i].hot}</p><br>
+//                 `
 
-    }
-    content_Top.innerHTML = `
-                                    <div class = "content">${str}</div>
-                                    `
-    for (var i = 0; i <= 9; i++) {
-        fontsizeTemp[i] = parseInt((Math.pow(hotsnum[i], 1 / 2)) / 70)//平方算子
-    }
-    // 
-    // hotsnum[i]/129380.731
-    for (var i = 0; i <= 9; i++) {
-        console.log("??跪求大佬给热度和字体大小的算法！！！！")
-        if (fontsizeTemp[i] > 12) {
-            document.getElementsByClassName("hot")[i].style.fontSize = fontsizeTemp[i] + "px"
-            // document.getElementsByClassName("content_Inside")[i].style.fontSize = fontsizeTemp[i]+"px"
-        }
-        else
-            document.getElementsByClassName("hot")[i].style.fontSize = "12px"
-        // document.getElementsByClassName("content_Inside")[i].style.fontSize = "15px"
-    }
-})
+//     }
+//     content_Top.innerHTML = `
+//                                     <div class = "content">${str}</div>
+//                                     `
+//     for (var i = 0; i <= 9; i++) {
+//         fontsizeTemp[i] = parseInt((Math.pow(hotsnum[i], 1 / 2)) / 70)//平方算子
+//     }
+//     // 
+//     // hotsnum[i]/129380.731
+//     for (var i = 0; i <= 9; i++) {
+//         console.log("??跪求大佬给热度和字体大小的算法！！！！")
+//         if (fontsizeTemp[i] > 12) {
+//             document.getElementsByClassName("hot")[i].style.fontSize = fontsizeTemp[i] + "px"
+//             // document.getElementsByClassName("content_Inside")[i].style.fontSize = fontsizeTemp[i]+"px"
+//         }
+//         else
+//             document.getElementsByClassName("hot")[i].style.fontSize = "12px"
+//         // document.getElementsByClassName("content_Inside")[i].style.fontSize = "15px"
+//     }
+// })
 //调用
 ajax1()
 
@@ -129,28 +129,28 @@ $("#button2").click(function () {
                 </div>`
     }, 100)
 })
-$("#button3").click(function () {
+// $("#button3").click(function () {
 
-    content_Top.innerHTML = `
-            <div id = "content_video">
-            <div id="kenan">
-            <iframe 
-            id="video"
-            height=540vh 
-            width=800 wh
-            src='https://jx.jsonplayer.com/player/?url=https://www.iqiyi.com/v_cqro9hqr9s.html' 
-            frameborder=0 
-            allowfullscreen="true">
-            </iframe>
-            </div><br>
+//     content_Top.innerHTML = `
+//             <div id = "content_video">
+//             <div id="kenan">
+//             <iframe 
+//             id="video"
+//             height=540vh 
+//             width=800 wh
+//             src='https://jx.jsonplayer.com/player/?url=https://www.iqiyi.com/v_cqro9hqr9s.html' 
+//             frameborder=0 
+//             allowfullscreen="true">
+//             </iframe>
+//             </div><br>
          
-            </div>
+//             </div>
              
-                                `
-    console.log("视频用了parwix解析，接口地址：https://vip.parwix.com:4433/player/?url=")
-    console.log("本视频仅仅为学习使用")
+//                                 `
+//     console.log("视频用了parwix解析，接口地址：https://vip.parwix.com:4433/player/?url=")
+//     console.log("本视频仅仅为学习使用")
 
-})
+// })
 
 $("#button4").click(function () {
 
