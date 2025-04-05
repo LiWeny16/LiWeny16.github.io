@@ -8,25 +8,30 @@
 * {
   scroll-behavior: smooth;
 }
+
 /* Header */
 
 /* Header */
 iframe {
   overflow: hidden !important;
 }
+
 .FLEX {
   display: flex;
 }
+
 #firstPageHeader {
   justify-content: center;
   flex: 0 0 9%;
 }
-#iconBox > h2 > span:nth-child(1) > img {
+
+#iconBox>h2>span:nth-child(1)>img {
   width: 5%;
 }
+
 #firstPageInner {
   width: 100%;
-  background: #ffffff3d;
+  /* background: #ffffff3d; */
   backdrop-filter: blur(12px);
   align-items: center;
   justify-content: center;
@@ -34,35 +39,54 @@ iframe {
   animation-fill-mode: forwards;
   transition: 0.6s;
 }
-#firstPageInner:hover{
-  background:transparent;
+
+#firstPageInner:hover {
+  background: transparent;
   /* backdrop-filter: blur(0); */
 }
-#firstPageInner:active{
+
+#firstPageInner:active {
   backdrop-filter: blur(0);
 }
+
 #firstPageInner #iconBox {
   color: white;
   flex: 0 0 42%;
 }
+
 #firstPageInner #loginBox {
   color: white;
   align-items: baseline;
 }
-#firstPageInner #linksBox {
-}
+
+#firstPageInner #linksBox {}
+
 #linksBox a {
   margin: 10px 31px;
   text-decoration: none;
   border-bottom: solid transparent 3px;
   transition: 0.5s;
 }
+
 #linksBox a:hover {
   border-bottom: solid pink 3px;
 }
+
 .rightHeaderH2 {
   font-size: 3vh;
 }
+
+.rightHeaderH2 a {
+  color: white;
+  text-decoration: none;
+  /* 可选：去掉下划线 */
+}
+
+.rightHeaderH2 a:hover {
+  color: #ddd;
+  /* 可选：悬停时变一点灰，更有交互感 */
+}
+
 #loginBox a {
   font-size: 3vh;
   margin: 10px 31px;
@@ -70,9 +94,11 @@ iframe {
   border-bottom: solid transparent 3px;
   transition: 0.5s;
 }
+
 #loginBox a:hover {
   border-bottom: solid pink 3px;
 }
+
 #firstPageContent {
   flex: 0 0 80%;
 }
@@ -137,10 +163,8 @@ iframe {
   position: absolute;
   width: 2px;
   height: 50px;
-  background: linear-gradient(
-    rgba(255, 255, 255, 0.3),
-    rgba(255, 255, 255, 0.6)
-  );
+  background: linear-gradient(rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0.6));
 }
 
 .card_inside img {
