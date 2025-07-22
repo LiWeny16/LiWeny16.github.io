@@ -48,7 +48,7 @@ function linkTo(my_url) {
         ${createNewproCard(
           "https://bigonion.cn/openAI",
           "./background/projectSvg/人工智能.svg",
-          "Nodejs调用OpenAI接口实现的ChatGPT3.5人工智能",
+          "接口调用实现的ChatGLM4.0人工智能",
           {
             OpenAI: "Gold",
             Nodejs: "",
@@ -82,11 +82,11 @@ function linkTo(my_url) {
 
     document.getElementsByClassName("projectCard")[4].innerHTML = `
         ${createNewproCard(
-          "https://md.bigonion.cn",
-          "./background/projectSvg/Markdwon.svg",
-          "Golang实现的高性能Socks5代理(未完成)",
+          "https://letshare.fun/",
+          "./background/projectSvg/LetShare.svg",
+          "乐享分享,一个基于React的开源局域网文件分享平台",
           {
-            Golang: "Gold",
+            React: "Blue",
             后端: "Purple",
           }
         )}
