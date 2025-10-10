@@ -17,9 +17,21 @@
 
 ---
 
-## 2023
+## 2025
 
 <details id="latestList" class="details">
+<summary>展开</summary>
+<br>
+
+<a href="./articles/2025/如何解决最大值最小问题？.html">如何解决最大值最小问题？</a><br><br>
+
+</details>
+
+---
+
+## 2023
+
+<details class="details">
 <summary>展开</summary>
 <br>
 <a href="./articles/2023/如何消除JS异步传染性.html">如何消除JS异步传染性？</a><br><br>

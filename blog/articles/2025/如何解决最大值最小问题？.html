@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>&lbrack;&#x9996;&#x9875;&lt;&lt;&rbrack;&lpar;&period;&period;&sol;&period;&period;&sol;index&period;html&rpar;</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <h1 id="首页"><a href="../../index.html">首页&lt;&lt;</a></h1>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="keywords" content="二分查找,算法,最大值最小问题,bigonion,JavaScript" />
+<meta name="author" content="bigonion,bigonion@bigonion.cn">
+<meta name="description"
+content="Bigonion的个人主页,博客,最大值最小问题是算法竞赛中的经典题型，通过二分查找的思想，我们可以高效地解决这类问题。本文将从一个具体的例子出发，详细讲解最大值最小问题的解题思路和实现方法。">
+<h1 id="如何解决最大值最小问题">如何解决最大值最小问题？</h1>
+<hr>
+<h2 id="前言">前言</h2>
+<p>最大值最小问题是算法竞赛中的经典题型，其核心思想是通过二分查找来寻找满足条件的最优解。这类问题通常具有单调性，即当某个值可行时，比它更大的值也必定可行。掌握这类问题的解题思路，对于提高算法思维能力非常有帮助。</p>
+<hr>
+<h2 id="问题描述">问题描述</h2>
+<p>让我们从一个具体的例子来理解最大值最小问题：</p>
+<p><strong>火车装载问题</strong>：有n个包裹需要装载到m节车厢中，每个包裹有一定的重量，每节车厢有最大载重限制。我们需要找到最小的载重限制，使得所有包裹都能被装载。</p>
+<p>这就是典型的&quot;最大值最小&quot;问题 - 我们要最小化所有车厢中的最大载重。</p>
+<hr>
+<h2 id="解题思路">解题思路</h2>
+<h3 id="1-问题分析">1. 问题分析</h3>
+<p>对于这类问题，我们可以思考：</p>
+<ul>
+<li>如果载重限制为x时可以装下所有包裹，那么载重限制为x+1, x+2...也一定可以</li>
+<li>这种单调性让我们可以使用二分查找来寻找最小的可行解</li>
+</ul>
+<h3 id="2-二分查找的边界">2. 二分查找的边界</h3>
+<ul>
+<li><strong>左边界</strong>：至少要能装下最重的包裹，所以是<code>max(所有包裹重量)</code></li>
+<li><strong>右边界</strong>：最坏情况下用一节车厢装所有包裹，所以是<code>sum(所有包裹重量)</code></li>
+</ul>
+<h3 id="3-检查函数">3. 检查函数</h3>
+<p>关键在于实现一个检查函数<code>check(capacity)</code>，判断在给定载重限制下是否能装下所有包裹：</p>
+<pre><code class="language-javascript"><span class="hljs-keyword">const</span> <span class="hljs-title function_">check</span> = (<span class="hljs-params">capacity</span>) =&gt; {
+    <span class="hljs-keyword">let</span> carriagesNeeded = <span class="hljs-number">1</span>;  <span class="hljs-comment">// 至少需要一节车厢</span>
+    <span class="hljs-keyword">let</span> currentSum = <span class="hljs-number">0</span>;       <span class="hljs-comment">// 当前车厢的载重</span>
+    
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; n; i++) {
+        <span class="hljs-keyword">if</span> (p[i] &gt; capacity) {
+            <span class="hljs-comment">// 单个包裹超过载重限制，无法装载</span>
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+        }
+        <span class="hljs-keyword">if</span> (currentSum + p[i] &lt;= capacity) {
+            <span class="hljs-comment">// 当前车厢还能装下这个包裹</span>
+            currentSum += p[i];
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-comment">// 需要新的车厢</span>
+            carriagesNeeded++;
+            currentSum = p[i];
+        }
+    }
+    
+    <span class="hljs-keyword">return</span> carriagesNeeded &lt;= m;
+};
+</code></pre>
+<hr>
+<h2 id="完整实现">完整实现</h2>
+<pre><code class="language-javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">solve</span>(<span class="hljs-params">input</span>) {
+    <span class="hljs-keyword">const</span> lines = input.<span class="hljs-title function_">trim</span>().<span class="hljs-title function_">split</span>(<span class="hljs-string">&#x27;\n&#x27;</span>);
+    <span class="hljs-keyword">const</span> [n, m] = lines[<span class="hljs-number">0</span>].<span class="hljs-title function_">split</span>(<span class="hljs-string">&#x27; &#x27;</span>).<span class="hljs-title function_">map</span>(<span class="hljs-title class_">Number</span>);
+    <span class="hljs-keyword">const</span> p = lines[<span class="hljs-number">1</span>].<span class="hljs-title function_">split</span>(<span class="hljs-string">&#x27; &#x27;</span>).<span class="hljs-title function_">map</span>(<span class="hljs-title class_">Number</span>);
+
+    <span class="hljs-keyword">const</span> <span class="hljs-title function_">check</span> = (<span class="hljs-params">capacity</span>) =&gt; {
+        <span class="hljs-keyword">let</span> carriagesNeeded = <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">let</span> currentSum = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; n; i++) {
+            <span class="hljs-keyword">if</span> (p[i] &gt; capacity) {
+                <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+            }
+            <span class="hljs-keyword">if</span> (currentSum + p[i] &lt;= capacity) {
+                currentSum += p[i];
+            } <span class="hljs-keyword">else</span> {
+                carriagesNeeded++;
+                currentSum = p[i];
+            }
+        }
+        <span class="hljs-keyword">return</span> carriagesNeeded &lt;= m;
+    };
+
+    <span class="hljs-comment">// 确定二分查找的边界</span>
+    <span class="hljs-keyword">let</span> left = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> size <span class="hljs-keyword">of</span> p) {
+        left = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">max</span>(left, size);
+    }
+    
+    <span class="hljs-keyword">let</span> right = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> size <span class="hljs-keyword">of</span> p) {
+        right += size;
+    }
+    
+    <span class="hljs-keyword">let</span> ans = right;
+
+    <span class="hljs-comment">// 二分查找最小的可行载重限制</span>
+    <span class="hljs-keyword">while</span> (left &lt;= right) {
+        <span class="hljs-keyword">const</span> mid = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>((left + right) / <span class="hljs-number">2</span>);
+        <span class="hljs-keyword">if</span> (<span class="hljs-title function_">check</span>(mid)) {
+            ans = mid;
+            right = mid - <span class="hljs-number">1</span>;  <span class="hljs-comment">// 尝试更小的值</span>
+        } <span class="hljs-keyword">else</span> {
+            left = mid + <span class="hljs-number">1</span>;   <span class="hljs-comment">// 当前值太小，尝试更大的值</span>
+        }
+    }
+
+    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(ans);
+}
+</code></pre>
+<hr>
+<h2 id="算法复杂度分析">算法复杂度分析</h2>
+<ul>
+<li><strong>时间复杂度</strong>：O(n * log(sum - max))
+<ul>
+<li>二分查找的次数为O(log(sum - max))</li>
+<li>每次检查需要O(n)时间遍历所有包裹</li>
+</ul>
+</li>
+<li><strong>空间复杂度</strong>：O(1)，只使用了常数级别的额外空间</li>
+</ul>
+<hr>
+<h2 id="测试用例分析">测试用例分析</h2>
+<h3 id="示例1">示例1</h3>
+<pre><code>输入：3 3
+      1 6 4
+输出：6
+</code></pre>
+<p>分析：有3个包裹（重量分别为1,6,4），3节车厢。最优方案是每节车厢装一个包裹，所以最大载重为6。</p>
+<h3 id="示例2">示例2</h3>
+<pre><code>输入：5 2  
+      7 2 5 10 8
+输出：18
+</code></pre>
+<p>分析：有5个包裹，2节车厢。一种方案是第一节车厢装[7,2,5]，第二节车厢装[10,8]，最大载重为18。</p>
+<hr>
+<h2 id="类似问题的拓展">类似问题的拓展</h2>
+<p>最大值最小问题在很多场景中都有应用：</p>
+<ol>
+<li><strong>任务调度</strong>：将n个任务分配给m个处理器，最小化最大完成时间</li>
+<li><strong>网络带宽</strong>：在网络中找到最大流的最小瓶颈</li>
+<li><strong>资源分配</strong>：将资源分配给不同部门，最小化最大分配量</li>
+</ol>
+<p><strong>解题模板</strong>：</p>
+<pre><code class="language-javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">binarySearchMinMax</span>(<span class="hljs-params">arr, groups</span>) {
+    <span class="hljs-keyword">let</span> left = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">max</span>(...arr);
+    <span class="hljs-keyword">let</span> right = arr.<span class="hljs-title function_">reduce</span>(<span class="hljs-function">(<span class="hljs-params">sum, val</span>) =&gt;</span> sum + val, <span class="hljs-number">0</span>);
+    <span class="hljs-keyword">let</span> result = right;
+    
+    <span class="hljs-keyword">while</span> (left &lt;= right) {
+        <span class="hljs-keyword">const</span> mid = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>((left + right) / <span class="hljs-number">2</span>);
+        <span class="hljs-keyword">if</span> (<span class="hljs-title function_">canAchieve</span>(arr, groups, mid)) {
+            result = mid;
+            right = mid - <span class="hljs-number">1</span>;
+        } <span class="hljs-keyword">else</span> {
+            left = mid + <span class="hljs-number">1</span>;
+        }
+    }
+    
+    <span class="hljs-keyword">return</span> result;
+}
+</code></pre>
+<hr>
+<h2 id="总结">总结</h2>
+<p>最大值最小问题的关键在于：</p>
+<ol>
+<li><strong>识别单调性</strong>：找到问题中的单调递增或递减关系</li>
+<li><strong>确定边界</strong>：合理设置二分查找的左右边界</li>
+<li><strong>实现检查函数</strong>：高效判断某个值是否可行</li>
+<li><strong>二分查找</strong>：在可行解中找到最优解</li>
+</ol>
+<p>掌握了这个思路，我们就能解决一大类优化问题。在实际编程中，二分查找不仅仅用于在有序数组中查找元素，更是解决最优化问题的有力工具！</p>
+<hr>
+<h2 id="致谢">致谢</h2>
+<ul>
+<li>感谢算法竞赛社区的宝贵资源和讨论</li>
+</ul>
+<hr>
+<h2 id="预告">预告</h2>
+<ul class="contains-task-list">
+<li class="task-list-item enabled"><input class="task-list-item-checkbox"type="checkbox"> 动态规划入门指南</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox"type="checkbox"> 图论算法详解</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox"type="checkbox"> 数据结构优化技巧</li>
+</ul>
+<hr>
+<h2 id="关于">关于</h2>
+<p>作者：bigonion<br>
+邮箱：bigonion@bigonion.cn<br>
+NameSpace: <a href="https://bigonion.cn">大聪花的家</a><br>
+Origin: <a href="https://bigonion.cn/blog">大聪花的博客</a><br>
+Powered by <a href="https://md.bigonion.cn">markdown 在线</a></p>
+<p>声明：未经本人同意,禁止转载、搬运、抄袭！</p>
+<!-- 博客配置区 v0.1.0  -->
+<div id ="timeBox"><div>
+<!--  -->
+<script>
+const description = document.createElement('description');
+description instanceof HTMLUnknownElement // true
+description instanceof HTMLElement // true
+const config = document.createElement('config');
+config instanceof HTMLUnknownElement // true
+config instanceof HTMLElement // true
+function getConfig(){
+
+}
+window.onload=()=>{
+    document.getElementById("timeBox").innerHTML=JSON.parse(document.getElementsByClassName("blogConfig")[0].innerHTML.replace(/[ ]|[\r\n]/g,"")).time
+}
+</script>
+<style>
+    config{
+        display:none;
+    }
+    .blogConfig{
+        display:none;
+    }
+    description{
+        display:none;
+    }
+</style>
+<config class="blogConfig" style="display:none;">
+{
+    "isNew":true,
+    "onTop":false,
+    "display":true,
+    "recommendation":"最大值最小问题是算法竞赛中的经典题型，通过二分查找的思想，我们可以高效地解决这类问题。本文将从一个具体的例子出发，详细讲解最大值最小问题的解题思路和实现方法。",
+    "tags":{},
+    "picURL":"",
+    "time":"2025.1.10"
+}
+</config>
+<description>
+/*
+* @description 博客配置
+* @Type.d.ts 
+* 
+  interface Tagtype {
+  tagName: String;
+  color: String;
+}
+* 
+* @param isNew boolean
+* @param display boolean
+* @param onTop boolean
+* @param recommendation String
+* @param tags Tagtype
+* @param pic String
+* @param time String
+*/
+</description>
+<!-- 博客配置区  -->
+            
+            
+        </body>
+        </html>
