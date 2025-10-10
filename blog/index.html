@@ -1,971 +1,258 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>index</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>&#x6b22;&#x8fce;&#x6765;&#x5230; Onion &#x7684;&#x535a;&#x5ba2;</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"
-    />
-    <title>大聪花的博客</title>
-    <meta name="keywords" content="博客,blog,大聪花,OpenAI,bigonion,Markdwon" />
-    <meta name="author" content="bigonion,bigonion@bigonion.cn" />
-    <meta
-      name="description"
-      content="Bigonion大聪花的博客,博客,包含人工智能，AI,BP神经网络，JavaScript，线性代数，自控原理，现代控制理论，串口通讯等等知识...持续更新中..."
-    />
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css"
-    />
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
 
-    <style>
-      code[class*="language-"],
-      pre[class*="language-"] {
-        color: #333;
-        background: 0 0;
-        font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-        text-align: left;
-        white-space: pre;
-        word-spacing: normal;
-        word-break: normal;
-        word-wrap: normal;
-        line-height: 1.4;
-        -moz-tab-size: 8;
-        -o-tab-size: 8;
-        tab-size: 8;
-        -webkit-hyphens: none;
-        -moz-hyphens: none;
-        -ms-hyphens: none;
-        hyphens: none;
-      }
-      pre[class*="language-"] {
-        padding: 0.8em;
-        overflow: auto;
-        border-radius: 3px;
-        background: #f5f5f5;
-      }
-      :not(pre) > code[class*="language-"] {
-        padding: 0.1em;
-        border-radius: 0.3em;
-        white-space: normal;
-        background: #f5f5f5;
-      }
-      .token.blockquote,
-      .token.comment {
-        color: #969896;
-      }
-      .token.cdata {
-        color: #183691;
-      }
-      .token.doctype,
-      .token.macro.property,
-      .token.punctuation,
-      .token.variable {
-        color: #333;
-      }
-      .token.builtin,
-      .token.important,
-      .token.keyword,
-      .token.operator,
-      .token.rule {
-        color: #a71d5d;
-      }
-      .token.attr-value,
-      .token.regex,
-      .token.string,
-      .token.url {
-        color: #183691;
-      }
-      .token.atrule,
-      .token.boolean,
-      .token.code,
-      .token.command,
-      .token.constant,
-      .token.entity,
-      .token.number,
-      .token.property,
-      .token.symbol {
-        color: #0086b3;
-      }
-      .token.prolog,
-      .token.selector,
-      .token.tag {
-        color: #63a35c;
-      }
-      .token.attr-name,
-      .token.class,
-      .token.class-name,
-      .token.function,
-      .token.id,
-      .token.namespace,
-      .token.pseudo-class,
-      .token.pseudo-element,
-      .token.url-reference .token.variable {
-        color: #795da3;
-      }
-      .token.entity {
-        cursor: help;
-      }
-      .token.title,
-      .token.title .token.punctuation {
-        font-weight: 700;
-        color: #1d3e81;
-      }
-      .token.list {
-        color: #ed6a43;
-      }
-      .token.inserted {
-        background-color: #eaffea;
-        color: #55a532;
-      }
-      .token.deleted {
-        background-color: #ffecec;
-        color: #bd2c00;
-      }
-      .token.bold {
-        font-weight: 700;
-      }
-      .token.italic {
-        font-style: italic;
-      }
-      .language-json .token.property {
-        color: #183691;
-      }
-      .language-markup .token.tag .token.punctuation {
-        color: #333;
-      }
-      .language-css .token.function,
-      code.language-css {
-        color: #0086b3;
-      }
-      .language-yaml .token.atrule {
-        color: #63a35c;
-      }
-      code.language-yaml {
-        color: #183691;
-      }
-      .language-ruby .token.function {
-        color: #333;
-      }
-      .language-markdown .token.url {
-        color: #795da3;
-      }
-      .language-makefile .token.symbol {
-        color: #795da3;
-      }
-      .language-makefile .token.variable {
-        color: #183691;
-      }
-      .language-makefile .token.builtin {
-        color: #0086b3;
-      }
-      .language-bash .token.keyword {
-        color: #0086b3;
-      }
-      pre[data-line] {
-        position: relative;
-        padding: 1em 0 1em 3em;
-      }
-      pre[data-line] .line-highlight-wrapper {
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-color: transparent;
-        display: block;
-        width: 100%;
-      }
-      pre[data-line] .line-highlight {
-        position: absolute;
-        left: 0;
-        right: 0;
-        padding: inherit 0;
-        margin-top: 1em;
-        background: hsla(24, 20%, 50%, 0.08);
-        background: linear-gradient(
-          to right,
-          hsla(24, 20%, 50%, 0.1) 70%,
-          hsla(24, 20%, 50%, 0)
-        );
-        pointer-events: none;
-        line-height: inherit;
-        white-space: pre;
-      }
-      pre[data-line] .line-highlight:before,
-      pre[data-line] .line-highlight[data-end]:after {
-        content: attr(data-start);
-        position: absolute;
-        top: 0.4em;
-        left: 0.6em;
-        min-width: 1em;
-        padding: 0 0.5em;
-        background-color: hsla(24, 20%, 50%, 0.4);
-        color: #f4f1ef;
-        font: bold 65%/1.5 sans-serif;
-        text-align: center;
-        vertical-align: 0.3em;
-        border-radius: 999px;
-        text-shadow: none;
-        box-shadow: 0 1px #fff;
-      }
-      pre[data-line] .line-highlight[data-end]:after {
-        content: attr(data-end);
-        top: auto;
-        bottom: 0.4em;
-      }
-      html body {
-        font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans,
-          sans-serif;
-        font-size: 16px;
-        line-height: 1.6;
-        color: #333;
-        background-color: #fff;
-        overflow: initial;
-        box-sizing: border-box;
-        word-wrap: break-word;
-      }
-      html body > :first-child {
-        margin-top: 0;
-      }
-      html body h1,
-      html body h2,
-      html body h3,
-      html body h4,
-      html body h5,
-      html body h6 {
-        line-height: 1.2;
-        margin-top: 1em;
-        margin-bottom: 16px;
-        color: #000;
-      }
-      html body h1 {
-        font-size: 2.25em;
-        font-weight: 300;
-        padding-bottom: 0.3em;
-      }
-      html body h2 {
-        font-size: 1.75em;
-        font-weight: 400;
-        padding-bottom: 0.3em;
-      }
-      html body h3 {
-        font-size: 1.5em;
-        font-weight: 500;
-      }
-      html body h4 {
-        font-size: 1.25em;
-        font-weight: 600;
-      }
-      html body h5 {
-        font-size: 1.1em;
-        font-weight: 600;
-      }
-      html body h6 {
-        font-size: 1em;
-        font-weight: 600;
-      }
-      html body h1,
-      html body h2,
-      html body h3,
-      html body h4,
-      html body h5 {
-        font-weight: 600;
-      }
-      html body h5 {
-        font-size: 1em;
-      }
-      html body h6 {
-        color: #5c5c5c;
-      }
-      html body strong {
-        color: #000;
-      }
-      html body del {
-        color: #5c5c5c;
-      }
-      html body a:not([href]) {
-        color: inherit;
-        text-decoration: none;
-      }
-      html body a {
-        color: #08c;
-        text-decoration: none;
-      }
-      html body a:hover {
-        color: #00a3f5;
-        text-decoration: none;
-      }
-      html body img {
-        max-width: 100%;
-      }
-      html body > p {
-        margin-top: 0;
-        margin-bottom: 16px;
-        word-wrap: break-word;
-      }
-      html body > ol,
-      html body > ul {
-        margin-bottom: 16px;
-      }
-      html body ol,
-      html body ul {
-        padding-left: 2em;
-      }
-      html body ol.no-list,
-      html body ul.no-list {
-        padding: 0;
-        list-style-type: none;
-      }
-      html body ol ol,
-      html body ol ul,
-      html body ul ol,
-      html body ul ul {
-        margin-top: 0;
-        margin-bottom: 0;
-      }
-      html body li {
-        margin-bottom: 0;
-      }
-      html body li.task-list-item {
-        list-style: none;
-      }
-      html body li > p {
-        margin-top: 0;
-        margin-bottom: 0;
-      }
-      html body .task-list-item-checkbox {
-        margin: 0 0.2em 0.25em -1.8em;
-        vertical-align: middle;
-      }
-      html body .task-list-item-checkbox:hover {
-        cursor: pointer;
-      }
-      html body blockquote {
-        margin: 16px 0;
-        font-size: inherit;
-        padding: 0 15px;
-        color: #5c5c5c;
-        background-color: #f0f0f0;
-        border-left: 4px solid #d6d6d6;
-      }
-      html body blockquote > :first-child {
-        margin-top: 0;
-      }
-      html body blockquote > :last-child {
-        margin-bottom: 0;
-      }
-      html body hr {
-        height: 4px;
-        margin: 32px 0;
-        background-color: #d6d6d6;
-        border: 0 none;
-      }
-      html body table {
-        margin: 10px 0 15px 0;
-        border-collapse: collapse;
-        border-spacing: 0;
-        display: block;
-        width: 100%;
-        overflow: auto;
-        word-break: normal;
-        word-break: keep-all;
-      }
-      html body table th {
-        font-weight: 700;
-        color: #000;
-      }
-      html body table td,
-      html body table th {
-        border: 1px solid #d6d6d6;
-        padding: 6px 13px;
-      }
-      html body dl {
-        padding: 0;
-      }
-      html body dl dt {
-        padding: 0;
-        margin-top: 16px;
-        font-size: 1em;
-        font-style: italic;
-        font-weight: 700;
-      }
-      html body dl dd {
-        padding: 0 16px;
-        margin-bottom: 16px;
-      }
-      html body code {
-        font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-        font-size: 0.85em !important;
-        color: #000;
-        background-color: #f0f0f0;
-        border-radius: 3px;
-        padding: 0.2em 0;
-      }
-      html body code::after,
-      html body code::before {
-        letter-spacing: -0.2em;
-        content: "\00a0";
-      }
-      html body pre > code {
-        padding: 0;
-        margin: 0;
-        font-size: 0.85em !important;
-        word-break: normal;
-        white-space: pre;
-        background: 0 0;
-        border: 0;
-      }
-      html body .highlight {
-        margin-bottom: 16px;
-      }
-      html body .highlight pre,
-      html body pre {
-        padding: 1em;
-        overflow: auto;
-        font-size: 0.85em !important;
-        line-height: 1.45;
-        border: #d6d6d6;
-        border-radius: 3px;
-      }
-      html body .highlight pre {
-        margin-bottom: 0;
-        word-break: normal;
-      }
-      html body pre code,
-      html body pre tt {
-        display: inline;
-        max-width: initial;
-        padding: 0;
-        margin: 0;
-        overflow: initial;
-        line-height: inherit;
-        word-wrap: normal;
-        background-color: transparent;
-        border: 0;
-      }
-      html body pre code:after,
-      html body pre code:before,
-      html body pre tt:after,
-      html body pre tt:before {
-        content: normal;
-      }
-      html body blockquote,
-      html body dl,
-      html body ol,
-      html body p,
-      html body pre,
-      html body ul {
-        margin-top: 0;
-        margin-bottom: 16px;
-      }
-      html body kbd {
-        color: #000;
-        border: 1px solid #d6d6d6;
-        border-bottom: 2px solid #c7c7c7;
-        padding: 2px 4px;
-        background-color: #f0f0f0;
-        border-radius: 3px;
-      }
-      @media print {
-        html body {
-          background-color: #fff;
-        }
-        html body h1,
-        html body h2,
-        html body h3,
-        html body h4,
-        html body h5,
-        html body h6 {
-          color: #000;
-          page-break-after: avoid;
-        }
-        html body blockquote {
-          color: #5c5c5c;
-        }
-        html body pre {
-          page-break-inside: avoid;
-        }
-        html body table {
-          display: table;
-        }
-        html body img {
-          display: block;
-          max-width: 100%;
-          max-height: 100%;
-        }
-        html body code,
-        html body pre {
-          word-wrap: break-word;
-          white-space: pre;
-        }
-      }
-      .markdown-preview {
-        width: 100%;
-        height: 100%;
-        box-sizing: border-box;
-      }
-      .markdown-preview .newpage,
-      .markdown-preview .pagebreak {
-        page-break-before: always;
-      }
-      .markdown-preview pre.line-numbers {
-        position: relative;
-        padding-left: 3.8em;
-        counter-reset: linenumber;
-      }
-      .markdown-preview pre.line-numbers > code {
-        position: relative;
-      }
-      .markdown-preview pre.line-numbers .line-numbers-rows {
-        position: absolute;
-        pointer-events: none;
-        top: 1em;
-        font-size: 100%;
-        left: 0;
-        width: 3em;
-        letter-spacing: -1px;
-        border-right: 1px solid #999;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-      .markdown-preview pre.line-numbers .line-numbers-rows > span {
-        pointer-events: none;
-        display: block;
-        counter-increment: linenumber;
-      }
-      .markdown-preview pre.line-numbers .line-numbers-rows > span:before {
-        content: counter(linenumber);
-        color: #999;
-        display: block;
-        padding-right: 0.8em;
-        text-align: right;
-      }
-      .markdown-preview .mathjax-exps .MathJax_Display {
-        text-align: center !important;
-      }
-      .markdown-preview:not([data-for="preview"]) .code-chunk .btn-group {
-        display: none;
-      }
-      .markdown-preview:not([data-for="preview"]) .code-chunk .status {
-        display: none;
-      }
-      .markdown-preview:not([data-for="preview"]) .code-chunk .output-div {
-        margin-bottom: 16px;
-      }
-      .markdown-preview .md-toc {
-        padding: 0;
-      }
-      .markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link {
-        display: inline;
-        padding: 0.25rem 0;
-      }
-      .markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,
-      .markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p {
-        display: inline;
-      }
-      .markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link {
-        font-weight: 800;
-      }
-      .scrollbar-style::-webkit-scrollbar {
-        width: 8px;
-      }
-      .scrollbar-style::-webkit-scrollbar-track {
-        border-radius: 10px;
-        background-color: transparent;
-      }
-      .scrollbar-style::-webkit-scrollbar-thumb {
-        border-radius: 5px;
-        background-color: rgba(150, 150, 150, 0.66);
-        border: 4px solid rgba(150, 150, 150, 0.66);
-        background-clip: content-box;
-      }
-      html body[for="html-export"]:not([data-presentation-mode]) {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        margin: 0;
-        padding: 0;
-        overflow: auto;
-      }
-      html
-        body[for="html-export"]:not([data-presentation-mode])
-        .markdown-preview {
-        position: relative;
-        top: 0;
-      }
-      @media screen and (min-width: 914px) {
-        html
-          body[for="html-export"]:not([data-presentation-mode])
-          .markdown-preview {
-          padding: 2em calc(50% - 457px + 2em);
-        }
-      }
-      @media screen and (max-width: 914px) {
-        html
-          body[for="html-export"]:not([data-presentation-mode])
-          .markdown-preview {
-          padding: 2em;
-        }
-      }
-      @media screen and (max-width: 450px) {
-        html
-          body[for="html-export"]:not([data-presentation-mode])
-          .markdown-preview {
-          font-size: 14px !important;
-          padding: 1em;
-        }
-      }
-      @media print {
-        html
-          body[for="html-export"]:not([data-presentation-mode])
-          #sidebar-toc-btn {
-          display: none;
-        }
-      }
-      html
-        body[for="html-export"]:not([data-presentation-mode])
-        #sidebar-toc-btn {
-        position: fixed;
-        bottom: 8px;
-        left: 8px;
-        font-size: 28px;
-        cursor: pointer;
-        color: inherit;
-        z-index: 99;
-        width: 32px;
-        text-align: center;
-        opacity: 0.4;
-      }
-      html
-        body[for="html-export"]:not(
-          [data-presentation-mode]
-        )[html-show-sidebar-toc]
-        #sidebar-toc-btn {
-        opacity: 1;
-      }
-      html
-        body[for="html-export"]:not(
-          [data-presentation-mode]
-        )[html-show-sidebar-toc]
-        .md-sidebar-toc {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 300px;
-        height: 100%;
-        padding: 32px 0 48px 0;
-        font-size: 14px;
-        box-shadow: 0 0 4px rgba(150, 150, 150, 0.33);
-        box-sizing: border-box;
-        overflow: auto;
-        background-color: inherit;
-      }
-      html
-        body[for="html-export"]:not(
-          [data-presentation-mode]
-        )[html-show-sidebar-toc]
-        .md-sidebar-toc::-webkit-scrollbar {
-        width: 8px;
-      }
-      html
-        body[for="html-export"]:not(
-          [data-presentation-mode]
-        )[html-show-sidebar-toc]
-        .md-sidebar-toc::-webkit-scrollbar-track {
-        border-radius: 10px;
-        background-color: transparent;
-      }
-      html
-        body[for="html-export"]:not(
-          [data-presentation-mode]
-        )[html-show-sidebar-toc]
-        .md-sidebar-toc::-webkit-scrollbar-thumb {
-        border-radius: 5px;
-        background-color: rgba(150, 150, 150, 0.66);
-        border: 4px solid rgba(150, 150, 150, 0.66);
-        background-clip: content-box;
-      }
-      html
-        body[for="html-export"]:not(
-          [data-presentation-mode]
-        )[html-show-sidebar-toc]
-        .md-sidebar-toc
-        a {
-        text-decoration: none;
-      }
-      html
-        body[for="html-export"]:not(
-          [data-presentation-mode]
-        )[html-show-sidebar-toc]
-        .md-sidebar-toc
-        .md-toc {
-        padding: 0 16px;
-      }
-      html
-        body[for="html-export"]:not(
-          [data-presentation-mode]
-        )[html-show-sidebar-toc]
-        .md-sidebar-toc
-        .md-toc
-        .md-toc-link-wrapper
-        .md-toc-link {
-        display: inline;
-        padding: 0.25rem 0;
-      }
-      html
-        body[for="html-export"]:not(
-          [data-presentation-mode]
-        )[html-show-sidebar-toc]
-        .md-sidebar-toc
-        .md-toc
-        .md-toc-link-wrapper
-        .md-toc-link
-        div,
-      html
-        body[for="html-export"]:not(
-          [data-presentation-mode]
-        )[html-show-sidebar-toc]
-        .md-sidebar-toc
-        .md-toc
-        .md-toc-link-wrapper
-        .md-toc-link
-        p {
-        display: inline;
-      }
-      html
-        body[for="html-export"]:not(
-          [data-presentation-mode]
-        )[html-show-sidebar-toc]
-        .md-sidebar-toc
-        .md-toc
-        .md-toc-link-wrapper.highlighted
-        .md-toc-link {
-        font-weight: 800;
-      }
-      html
-        body[for="html-export"]:not(
-          [data-presentation-mode]
-        )[html-show-sidebar-toc]
-        .markdown-preview {
-        left: 300px;
-        width: calc(100% - 300px);
-        padding: 2em calc(50% - 457px - 300px / 2);
-        margin: 0;
-        box-sizing: border-box;
-      }
-      @media screen and (max-width: 1274px) {
-        html
-          body[for="html-export"]:not(
-            [data-presentation-mode]
-          )[html-show-sidebar-toc]
-          .markdown-preview {
-          padding: 2em;
-        }
-      }
-      @media screen and (max-width: 450px) {
-        html
-          body[for="html-export"]:not(
-            [data-presentation-mode]
-          )[html-show-sidebar-toc]
-          .markdown-preview {
-          width: 100%;
-        }
-      }
-      html
-        body[for="html-export"]:not([data-presentation-mode]):not(
-          [html-show-sidebar-toc]
-        )
-        .markdown-preview {
-        left: 50%;
-        transform: translateX(-50%);
-      }
-      html
-        body[for="html-export"]:not([data-presentation-mode]):not(
-          [html-show-sidebar-toc]
-        )
-        .md-sidebar-toc {
-        display: none;
-      }
-      /* Please visit the URL below for more information: */
-      /*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
-    </style>
-  </head>
-  <body for="html-export">
-    <div class="crossnote markdown-preview">
-      <h1
-        class="crossnote-header"
-        id="%E6%AC%A2%E8%BF%8E%E6%9D%A5%E5%88%B0-onion-%E7%9A%84%E5%8D%9A%E5%AE%A2"
-      >
-        欢迎来到 Onion 的博客
-      </h1>
+</style>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
 
-      <h1 class="crossnote-header" id="%E4%B8%BB%E9%A1%B5httpsbigonioncn">
-        <a href="https://bigonion.cn">主页</a>
-      </h1>
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
 
-      <h2 class="crossnote-header" id="%E7%9B%AE%E5%BD%95">目录:</h2>
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
 
-      <!-- HEAD -->
-      <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css"
-      />
-      <title>大聪花的博客</title>
-      <meta
-        name="keywords"
-        content="博客,blog,大聪花,OpenAI,bigonion,Markdwon"
-      />
-      <meta name="author" content="bigonion,bigonion@bigonion.cn" />
-      <meta
-        name="description"
-        content="Bigonion大聪花的博客,博客,包含人工智能，AI,BP神经网络，JavaScript，线性代数，自控原理，现代控制理论，串口通讯等等知识...持续更新中..."
-      />
-      <meta charset="utf-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css"
-      />
-      <!-- HEAD -->
-      <hr />
-      <h2 class="crossnote-header" id="2023">2023</h2>
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
 
-      <details id="latestList" class="details">
-        <summary>展开</summary>
-        <br />
-        <a href="./articles/2023/如何消除JS异步传染性.html"
-          >如何消除JS异步传染性？</a
-        ><br /><br />
-        <p>
-          <a href="./articles/2023/到底什么是比特率和波特率？.html"
-            >到底什么是比特率和波特率？</a
-          ><br /><br />
-        </p>
-        <p>
-          <a href="./articles/2023/什么是 RS232 串口通讯.html"
-            >什么是 RS232 串口通讯协议？</a
-          ><br /><br />
-        </p>
-        <p>
-          <a href="./articles/2023/axios如何让请求走socks或http代理Proxy？.html"
-            >axios 如何让请求走 socks/http 代理 Proxy？</a
-          ><br /><br />
-        </p>
-        <p>
-          <a href="./articles/2023/初识BP神经网络(一).html"
-            >初识 BP 神经网络(一)</a
-          ><br /><br />
-        </p>
-        <p>
-          <a
-            href="./articles/2023/线性代数之几何重数&amp;代数重数的理解(一).html"
-            >线性代数之几何重数&amp;代数重数的理解(一)</a
-          ><br /><br />
-        </p>
-        <p>
-          <a
-            href="./articles/2023/线性代数之几何重数&amp;代数重数的理解(二)-矩阵指数的求解.html"
-            >线性代数之几何重数&amp;代数重数的理解(二)-矩阵指数的求解</a
-          ><br /><br />
-        </p>
-        <p>
-          <a href="./articles/2023/线性代数分解能控能观性矩阵.html"
-            >N 维 LTI 系统的能控、能观性分解的 matlab 实现</a
-          ><br /><br />
-        </p>
-      </details>
-      <hr />
-      <h2 class="crossnote-header" id="2022">2022</h2>
+.markdown-alert>:first-child {
+  margin-top: 0
+}
 
-      <details class="details">
-        <summary>展开</summary>
-        <br />
-        <p>
-          <a
-            href="https://www.bilibili.com/read/cv19446735?spm_id_from=333.999.0.0"
-            >数电实验 2：实验八、基于 Multisim 的触摸延时灯设计</a
-          ><br /><br />
-        </p>
-        <p>
-          <a href="https://bbs.tampermonkey.net.cn/thread-3873-1-1.html"
-            >草履虫都能看懂的 chatGPT-AI 接入谷歌必应实战教学（三）eventStream
-            的数据处理</a
-          ><br /><br />
-        </p>
-        <p>
-          <a href="https://bbs.tampermonkey.net.cn/thread-3863-1-1.html"
-            >草履虫都能看懂的 chatGPT-AI 接入谷歌必应实战教学（二）eventStream
-            的接收</a
-          ><br /><br />
-        </p>
-        <p>
-          <a href="https://bbs.tampermonkey.net.cn/thread-3857-1-1.html"
-            >草履虫都能看懂的 chatGPT-AI 接入谷歌必应实战教学（一）开端</a
-          ><br /><br />
-        </p>
-        <p>
-          <a href="./articles/2022/软路由指南.html"
-            >【Openwrt】从入手软路由到刷机到文件服务器到 Nodejs 到 docker
-            home-assistant 智能网关</a
-          ><br /><br />
-        </p>
-        <p>
-          <a
-            href="https://www.bilibili.com/read/cv15891451?spm_id_from=333.999.0.0"
-            >【刷机】小米平板 1 刷 ROM 时出现 E1001 Error：7 和 twrp
-            恢复备份报错 Error：255 的解决方法</a
-          ><br /><br />
-        </p>
-      </details>
-      <hr />
-      <h2 class="crossnote-header" id="2021">2021</h2>
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
 
-      <p>暂无</p>
-      <hr />
-      <br />
-      <br />
-      <style>
-        .details {
-          /* font-size:20px; */
-          transition: 2s;
-        }
-      </style>
-      <script>
-        window.onload = () => {
-          document.querySelector("#latestList > summary").click()
-          document.title = "大聪花的博客"
-        }
-      </script>
-      <script>
-        const description = document.createElement("description")
-        description instanceof HTMLUnknownElement // true
-        description instanceof HTMLElement // true
-      </script>
-      <style>
-        config {
-          display: none;
-        }
-        .blogConfig {
-          display: none;
-        }
-        description {
-          display: none;
-        }
-      </style>
-      <description>
-        /* * @description 博客配置描述 * @Type.d.ts * interface Tagtype {
-        tagName: String; color: String; } * * @param isNew boolean * @param
-        display boolean * @param onTop boolean * @param recommendation String *
-        @param tags Tagtype * @param pic String * @param time String */
-      </description>
-    </div>
-  </body>
-</html>
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <h1 id="欢迎来到-onion-的博客">欢迎来到 Onion 的博客</h1>
+<h1 id="主页"><a href="https://bigonion.cn">主页</a></h1>
+<h2 id="目录">目录:</h2>
+  <!-- HEAD -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
+  <title>大聪花的博客</title>
+  <meta name="keywords" content="博客,blog,大聪花,OpenAI,bigonion,Markdwon" />
+  <meta name="author" content="bigonion,bigonion@bigonion.cn">
+  <meta name="description" content="Bigonion大聪花的博客,博客,包含人工智能，AI,BP神经网络，JavaScript，线性代数，自控原理，现代控制理论，串口通讯等等知识...持续更新中...">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
+  <!-- HEAD -->
+<hr>
+<h2 id="2025">2025</h2>
+<details id="latestList" class="details">
+<summary>展开</summary>
+<br>
+<p><a href="./articles/2025/如何解决最大值最小问题？.html">如何解决最大值最小问题？</a><br><br></p>
+</details>
+<hr>
+<h2 id="2023">2023</h2>
+<details class="details">
+<summary>展开</summary>
+<br>
+<a href="./articles/2023/如何消除JS异步传染性.html">如何消除JS异步传染性？</a><br><br>
+<p><a href="./articles/2023/到底什么是比特率和波特率？.html">到底什么是比特率和波特率？</a><br><br></p>
+<p><a href="./articles/2023/什么是 RS232 串口通讯.html">什么是 RS232 串口通讯协议？</a><br><br></p>
+<p><a href="./articles/2023/axios如何让请求走socks或http代理Proxy？.html">axios 如何让请求走 socks/http 代理 Proxy？</a><br><br></p>
+<p><a href="./articles/2023/初识BP神经网络(一).html">初识 BP 神经网络(一)</a><br><br></p>
+<p><a href="./articles/2023/线性代数之几何重数&代数重数的理解(一).html">线性代数之几何重数&amp;代数重数的理解(一)</a><br><br></p>
+<p><a href="./articles/2023/线性代数之几何重数&代数重数的理解(二)-矩阵指数的求解.html">线性代数之几何重数&amp;代数重数的理解(二)-矩阵指数的求解</a><br><br></p>
+<p><a href="./articles/2023/线性代数分解能控能观性矩阵.html">N 维 LTI 系统的能控、能观性分解的 matlab 实现</a><br><br></p>
+</details>
+<hr>
+<h2 id="2022">2022</h2>
+<details class="details">
+<summary>展开</summary>
+<br>
+<p><a href="https://www.bilibili.com/read/cv19446735?spm_id_from=333.999.0.0">数电实验 2：实验八、基于 Multisim 的触摸延时灯设计</a><br><br></p>
+<p><a href="https://bbs.tampermonkey.net.cn/thread-3873-1-1.html">草履虫都能看懂的 chatGPT-AI 接入谷歌必应实战教学（三）eventStream 的数据处理</a><br><br></p>
+<p><a href="https://bbs.tampermonkey.net.cn/thread-3863-1-1.html">草履虫都能看懂的 chatGPT-AI 接入谷歌必应实战教学（二）eventStream 的接收</a><br><br></p>
+<p><a href="https://bbs.tampermonkey.net.cn/thread-3857-1-1.html">草履虫都能看懂的 chatGPT-AI 接入谷歌必应实战教学（一）开端</a><br><br></p>
+<p><a href="./articles/2022/软路由指南.html">【Openwrt】从入手软路由到刷机到文件服务器到 Nodejs 到 docker home-assistant 智能网关</a><br><br></p>
+<p><a href="https://www.bilibili.com/read/cv15891451?spm_id_from=333.999.0.0">【刷机】小米平板 1 刷 ROM 时出现 E1001 Error：7 和 twrp 恢复备份报错 Error：255 的解决方法</a><br><br></p>
+</details>
+<hr>
+<h2 id="2021">2021</h2>
+<p>暂无</p>
+<hr>
+<!-- 分 割 线 -->
+<br>
+<br>
+<style>
+    .details{
+        /* font-size:20px; */
+        transition:2s;
+    }
+</style>
+<script>
+    window.onload=()=>{
+        document.querySelector("#latestList > summary").click()
+        document.title="大聪花的博客"
+    }
+</script>
+<!-- 博客配置区 v0.1.0  -->
+<script>
+const description = document.createElement('description');
+description instanceof HTMLUnknownElement // true
+description instanceof HTMLElement // true
+</script>
+<style>
+    config{
+        display:none;
+    }
+    .blogConfig{
+        display:none;
+    }
+    description{
+        display:none;
+    }
+</style>
+<!-- <config class="blogConfig" style="display:none;">
+{
+    "isNew":false,
+    "onTop":false,
+    "display":true,
+    "recommendation":"",
+    "tags":{},
+    "picURL":"",
+    "time":""
+}
+</config> -->
+<description>
+/*
+* @description 博客配置描述
+* @Type.d.ts 
+* 
+  interface Tagtype {
+  tagName: String;
+  color: String;
+}
+* 
+* @param isNew boolean
+* @param display boolean
+* @param onTop boolean
+* @param recommendation String
+* @param tags Tagtype
+* @param pic String
+* @param time String
+*/
+</description>
+<!-- 博客配置区  -->
+
+            
+            
+        </body>
+        </html>
